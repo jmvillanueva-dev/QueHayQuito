@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat Alternates',system-ui;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+:root {
+    --bg-white: rgb(255 255 255);
+    --bg-blue: rgb(38 125 255 );
+    --bg-black:  rgba(0, 0, 0, 0.297);
+    --border-color-gray: rgb(194 194 194);
+    --brand-color-black:rgb(0 0 0);
+    --brand-color-blue: rgb(0 87 217);
+    --brand-color-red: rgb(235, 69, 95);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat/Montserrat-Regular.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat/Montserrat-SemiBold.ttf) format('ttf');;
+    font-weight: 600;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat/Montserrat-Black.ttf) format('ttf');;
+    font-weight: 900;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url(/fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf) format('ttf');;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url(/fonts/Montserrat_Alternates/MontserratAlternates-Black.ttf) format('ttf');;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.font-color-white {
+    color: white;
+}
+
+.label {
+    padding: 0.25rem 0.4rem;
+    font-size: 10px;
+    width: max-content;
+    font-family: 'Montserrat', system-ui;
+    font-weight: 400;
+    color: white;
+    background-color: var(--brand-color-blue) ;
+    border-radius: 5px;
+}
+
+.font-bold {
+    font-family: 'Montserrat',system-ui ;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+a, li, button{
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    color: var(--brand-color-black);
+}
+
+nav {
+    background-color: var(--bg-white);
+    height: 64px;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--brand-color-blue);
+}
+
+.logo img{
+    width: 55px;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 0px 5px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.logo-text span {
+    font-family: 'Montserrat', system-ui;
+    font-weight: 900;  
+    font-size: 23px;
+}
+
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-links div{
+    width: 115px;
+    text-align: center;
+}
+
+.nav-links ul div {
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.nav-links ul div:hover{
+    color: var(--brand-color-blue);
+    font-weight: bold;
+    outline: 1px solid var(--brand-color-blue)  ;
+    box-shadow: var(--brand-color-blue) 3px 3px;
+    transition:  0.3s;
+}
+
+.nav-acctions, .nav-search {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0px 15px;
+}
+
+.nav-search form{
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+#bar-search {
+    border: 1px solid var(--border-color-gray);
+    height: 90%;
+    margin: 0 5px;
+}
+
+#bar-search:focus {
+    outline:2px solid var(--brand-color-blue);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    outline-offset: 0px;
+    transform: scale(1.02);
+}
+
+button {
+    background-color: transparent;
+    border-radius: 60px;
+    border: 1px solid var(--border-color-gray);
+    padding: .5rem 1.25rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--bg-blue);
+    color: var(--bg-white);
+    border-radius: 60px;
+    border: 1px solid transparent;
+    padding: .5rem 1.25rem;
+    transition: all 0.4s
+}
+
+.btn-primary {
+    background-color: var(--brand-color-blue);
+    border-radius: 60px;
+    border: 1px solid var(--brand-color-blue);
+    padding: .5rem 1.25rem;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--bg-blue);
+    transition: all 0.4s
+}
+
+#main-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 768px;
+    overflow: hidden;
+}
+
+h1 {
+    color: var(--bg-white);
+    text-align: center;
+    font-size: 80px;
+    line-height: 1.1;
+    font-family: 'Montserrat', system-ui;
+    font-weight: 600;
+    text-shadow: var(--brand-color-black) 5px 5px 5px;
+}
+
+.banner-text-container {
+    position: absolute;
+    max-width: 60rem;
+    width: max-content;
+}
+
+.img-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container  img {
+    width: 0%;
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.img-container img:hover {
+    cursor: crosshair;
+    filter: brightness(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.img-full {
+    position: relative;
+    display: flex;
+    flex: 1 1 0%;
+}
+
+.text-overlay {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 25px;
+    position: absolute;
+    bottom: 1px;
+    color: var(--bg-white);
+    background-image: linear-gradient(
+        0deg,
+        hsla(0, 0%, 7%, .5), 
+        hsla(0, 0%, 7%, .4) 51%,
+        hsla(0, 0%, 7%, 0));
+}
+
+.text-overlay span {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    padding: 20px;
+}
+.text-overlay img {
+    filter: none;
+    width: 30px;
+    height: 30px;
+}
+
+.text-overlay img:hover {
+    cursor: pointer;
+    transform: scale(1.1) translate(10px);
+}
+
+#destionations {
+    margin-top: 5rem;
+}
+
+.container-text, .container-places {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-bottom: 4rem
+}
+
+h2 {
+    font-family: 'Montserrat', system-ui;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.container-places img {
+    width: 400px;
+    height: 360px;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.container-places img:hover {
+    transform: scale(1.03);
+    transition: all 0.3s;
+    box-shadow: var(--bg-blue) 0px 0px 10px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-black);
+    color: #fff;
+    text-align: center;
+}
+
+.video-container .overlay h3 {
+    font-family: 'Montserrat', system-ui;
+    font-weight: 900;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.video-container .overlay p {
+    font-family: 'Montserrat', system-ui;
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+#latest-stories {
+    padding: 2rem;
+    text-align: center;
+}
+
+#latest-stories h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.stories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-story {
+    width: 60%;
+    position: relative;
+}
+
+.main-story img {
+    width: 730px;
+    height: 688px;
+    border-radius: 10px;
+}
+
+.main-story-text {
+    position: absolute;
+    width: 700px;
+    bottom: 1rem;
+    left: 8rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.main-story .category {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--brand-color-red);
+}
+
+.main-story h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.side-stories {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.side-story {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.side-story .category {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #0073e6;
+}
+
+.side-story h4 {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.more-articles {
+    margin-top: 1.5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+
