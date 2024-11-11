@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuéHay Quito | Información Turística</title>
+    <title>QuéHayQuito | Información Turística</title>
     <link rel="icon" type="image/vnd.icon" href="./img/icons/iconQQ.ico">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header>   
-        <nav>
+    <heade >   
+        <nav class="absolute fixed w-full">
             <a href="index.html">
                 <div class="logo">
                     <img src="./img/icons/logoQQ.png" alt="logo empresa">
@@ -25,15 +25,15 @@
                     <a href="#destionations"><div>Destinos</div></a>
                     <a href="#suggestions"><div>Sugerencias</div></a>
                     <a href="#latest-stories"><div>Blog</div></a>
-                    <a href=""><div>Tienda</div></a>
-                    <a href=""><div>Contáctanos</div></a>
+                    <a href="#store"><div>Tienda</div></a>
+                    <a href="#footer"><div>Contáctanos</div></a>
                 </ul>
             </div>
             <div class="nav-acctions">
                 <div class="nav-search">
                     <form action="">
                         <img src="./img/icons/ic_search.png" alt="icono búsqueda" />
-                        <input type="search" id="bar-search" name="bar-search"  size="25" placeholder=" Encuentra lo que buscas" />
+                        <input type="search" id="bar-search" class="border-black"  size="25" placeholder=" Encuentra lo que buscas..." />
                     </form>
                     <button>Buscar</button>
                 </div>
@@ -85,37 +85,45 @@
 
         <section id="destionations">
             <div class="container-text flex flex-column">
-                Planifica tu viaje
+                <div class="uppercase">
+                    Planifica tu viaje
+                </div>
                 <div class="flex justify-between">
                     <h2>¿Cuál es tu próximo destino?</h2>
                     <button>
                         Ver todos los lugares
                     </button>
                 </div>
-                
             </div>
             
             <div class="container-places flex justify-between">
-                <div class="flex flex-column font-bold">
-                    <a href="">
-                        <img src="./img/places/teleferico-quito.png" alt="">
-                    </a>
-                    <span class="label">MIRADOR</span>
-                        Teleférico de Quito
-                </div>
-                <div class="flex flex-column font-bold"> 
+                
+                <div class="flex flex-column"> 
                     <a href="">
                         <img src="./img/places/iglesia-san-francisco.png" alt="">
                     </a>
                     <span class="label">TEMPLOS</span>
-                    Iglesia de San Francisco de Quito
+                    <div class="font-size-24px margin-top-0">
+                        Iglesia de San Francisco de Quito
+                    </div>
                 </div>
-                <div class="flex flex-column font-bold">
+                <div class="flex flex-column">
                     <a href="">
-                        <img src="./img/places/museo-cera.png" alt="">
+                        <img src="./img/places/teleferico-quito.png" alt="">
+                    </a>
+                    <span class="label">MIRADOR</span>
+                    <div class="font-size-24px margin-top-0">
+                        Teleférico de Quito
+                    </div>
+                </div>
+                <div class="flex flex-column">
+                    <a href="">
+                        <img src="./img/places/monumento-mitad-mundo.png" alt="">
                     </a>
                     <span class="label">MUSEOS</span>
-                    Museo de Cera de Quito
+                    <div class="font-size-24px margin-top-0">
+                        Monumento Mitad del Mundo
+                    </div>
                 </div>
             </div>        
         </section>
@@ -128,7 +136,7 @@
                 </video>
                 <div class="overlay flex flex-column">
                     <h3>Top lugares Quito</h3>
-                    <p>2025</p>
+                    <p>2024</p>
                     <a href="#" class="btn-primary font-color-white">Ver más</a>
                 </div>
             </div>
@@ -157,7 +165,7 @@
                 <div class="side-stories">
                     <div class="side-story">
                         <span class="category">FAUNA Y NATURALEZA</span>
-                        <h4>10 Áreas protegidas que puedes visitar en Quito</h4>
+                        <h4>10 Parques naturalez que puedes visitar en Quito</h4>
                         <p>Nov 1, 2024 • Lectura: 2 min</p>
                     </div>
                     <div class="side-story">
@@ -176,10 +184,149 @@
                         <p>Nov 5, 2024 • Lectura: 7 min</p>
                     </div>
                 </div>
-                
             </div>
         </section>
+
+        <section id="newsletter">
+            <div class="flex w-full h-full relative align-items justify-center">
+                <div class="flex flex-column text-center max-w" >
+                    <div>
+                        <img src="./img/icons/newsletter.png" alt="" width="100px" height="100px">
+                    </div>
+                    <div>
+                        <p class="font-color-white font-bold font-size-48px margin-bottom">
+                            La inspiración que necesitas para completar tus visitas
+                        </p>
+                    </div>
+                    <div>
+                        <form class="margin-bottom">
+                            <input required type="email" class="border-black" placeholder="queHayQuito@email.com" size=50 />
+                            <button class="btn-red font-color-white">Suscríbete</button>
+                        </form>
+                        <p class="font-color-white small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="#newsletter" class="font-color-white font-bold-2 underline small-font-size-12px">Políticas de Privacidad</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="store" class="relative margin-top">
+            <img src="./img/store-items/portada-marketing.jpeg" class="object-cover w-full h-full"  alt="marketing portada libros">
+            <div class="background-black absolute margin-64 padding-32 top-0 left-0 font-color-white">
+                <div class="w-full width-96">
+                    <div class="uppercase margin-12" >
+                    Aquiere nuestros libros
+                    </div>
+                    <div class="margin-12">
+                        <h2>¡Las mejores guías de viaje, historias y leyendas!</h2>
+                    </div>
+                    <div>
+                        <p class="margin-12">
+                            Tanto si está interesado en viajar a la ciudad de Quito, como en hacer un tour o probar un nuevo plato, 
+                            nos comprometemos a inspirarle para que experimente sus viajes de una forma totalmente nueva. 
+                            Nuestra colección de más de 100 libros de seguro que inspirará al viajero que llevas dentro.
+                        </p>
+                        <button class="margin-12 font-color-white">Ver todos los libros</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social-media" class="padding-80">
+            <div class="flex align-items justify-between padding-32-rl">
+                <div>
+                    <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
+                </div>
+                <div class="flex align-items gap-8">
+                    <div>
+                        <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="./img/icons/sm/facebook.png" alt="facebook icon">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="./img/icons/sm/instagram.png" alt="instagram icon">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://x.com/" target="_blank">
+                            <img src="./img/icons/sm/x.png" alt="twitter icon">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://tiktok.com/" target="_blank">
+                            <img src="./img/icons/sm/tiktok.png" alt="tiktok icon">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
     </main>
+    <footer id="footer">
+        <div class="flex flex-column">
+            <div class="flex align-items justify-between padding-32">
+                <div class="flex flex-column">
+                    <div class=" flex align-items justify-between margin-bottom">
+                        <a href="index.html">
+                            <div class="logo">
+                                <img src="./img/icons/logoQQ.png" alt="logo empresa">
+                                <div class="logo-text">
+                                    quéHay
+                                    <span>Quito</span>                    
+                                </div>                
+                            </div>
+                        </a>
+                        <div>
+                            <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="flex flex-column w-full margin-bottom">
+                            <div class="margin-bottom block">
+                                <input required type="email" class="border-black" placeholder="queHayQuito@email.com" size=60 />
+                            </div>
+                            <button class="btn-red font-color-white">Suscríbete</button>
+                        </form>
+                        <p class="small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="politicas-privacidad.html" class="font-bold-2 underline small-font-size-12px">Políticas de Privacidad</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
+                    <div class="flex flex-column">
+                        <a href="#footer" class="padding-16-rl margin-bottom">Historia</a>
+                        <a href="#footer" class="padding-16-rl margin-bottom">Trabaja con nosotros</a>
+                        <a href="politicas-privacidad.html" class="padding-16-rl margin-bottom">Políticas de privacidad</a>
+                    </div>
+                    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
+                        <button class="btn-whatsapp" >
+                            <div class="flex align-items">
+                                <img src="./img/icons/sm/whatsapp.png" alt="">
+                                <span class="margin-1-rl">Escríbenos</span>
+                            </div>
+                        </button>
+                    </a>
+                    
+                </div>
+                
+                <div class="map-container flex flex-column align-start">
+                    <h3 class="uppercase margin-bottom">Éncuéntranos en:</h3>
+                        <div class="map-styles">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
+                            aria-label="Mapa Qué Hay Quito, Ecuador">
+                        </iframe>
+                </div>
+                </div>
+            </div>
+            <div class="padding-32 background-black-solid font-color-white small-font-size-12px">
+                &copy; Copyright 2024 QuéHayQuito Company.Todos los derechos reservados. Ninguna parte de este sitio puede ser reproducida sin nuestro permiso.
+            </div> 
+        </div>
+        
+    </footer>
     
 </body>
 </html>

@@ -3,13 +3,14 @@
     padding: 0;
     font-family:'Montserrat Alternates',system-ui;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 :root {
     --bg-white: rgb(255 255 255);
     --bg-blue: rgb(38 125 255 );
-    --bg-black:  rgba(0, 0, 0, 0.297);
+    --bg-red: rgb(202, 39, 63);
+    --bg-black:  rgba(0, 0, 0, 0.571);
     --border-color-gray: rgb(194 194 194);
     --brand-color-black:rgb(0 0 0);
     --brand-color-blue: rgb(0 87 217);
@@ -59,30 +60,192 @@
     flex-direction: column;
 }
 
+.align-start {
+    align-items: flex-start;
+}
+
 .justify-between {
     justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+.gap-8 {
+    gap: 0.5rem;
 }
 
 .font-color-white {
     color: white;
 }
 
+.font-color-blue {
+    color: var(--brand-color-blue);
+}
+
+.font-size-48px {
+    font-size: 3rem;
+}
+
+.font-size-24px {
+    font-size: 1.5rem;
+}
+
+.font-size-20px {
+    font-size: 1.25rem;
+}
+
+.small-font-size-12px {
+    font-size: 0.8rem;
+}
+
+.max-w {
+    max-width: 48rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.width-96 {
+    width: 24rem;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 100;
+}
+
+.padding-top {
+    padding-top: 3rem;
+}
+
+.padding-80 {
+    padding-top: 5rem;
+    padding-bottom: 5rem ;
+}
+
+.padding-16-rl {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.padding-32-rl {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.padding-32 {
+    padding: 2rem;
+}
+
+.margin-1-rl {
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+}
+
+.margin-12 {
+    margin: 0.8rem;
+}
+
+.margin-64 {
+    margin: 4rem;
+}
+
+.margin-top-0 {
+    margin-top: 0.2rem;
+}
+
+.margin-top {
+    margin-top: 2rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-64 {
+    margin-bottom: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.object-cover {
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
 .label {
-    padding: 0.25rem 0.4rem;
-    font-size: 10px;
-    width: max-content;
+    padding: 0.25rem;
+    text-align: center;
+    font-size: 0.6rem;
+    width: 4rem;
     font-family: 'Montserrat', system-ui;
     font-weight: 400;
     color: white;
     background-color: var(--brand-color-blue) ;
-    border-radius: 5px;
+    border-radius: 5px 60px;
 }
 
 .font-bold {
     font-family: 'Montserrat',system-ui ;
-    font-size: 1.25rem;
     font-weight: 600;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-family: 'Montserrat',system-ui ;
+    font-weight: 600;
+}
+
+.font-bold-2 {
+    font-family: 'Montserrat Alternates',system-ui ;
+    font-weight: 700;
+}
+
+.background-black {
+    background-color: var(--bg-black);
+}
+
+.background-black-solid {
+    background-color: var(--brand-color-black);
+}
+
 
 a, li, button{
     cursor: pointer;
@@ -163,16 +326,17 @@ nav {
     margin: 0 5px;
 }
 
-#bar-search {
+.border-black {
     border: 1px solid var(--border-color-gray);
-    height: 90%;
+    border-radius: 60px;
+    height: 30px;
     margin: 0 5px;
+    padding: 2px 15px;
 }
 
-#bar-search:focus {
+.border-black:focus {
     outline:2px solid var(--brand-color-blue);
     border: 1px solid transparent;
-    border-radius: 2px;
     outline-offset: 0px;
     transform: scale(1.02);
 }
@@ -182,7 +346,9 @@ button {
     border-radius: 60px;
     border: 1px solid var(--border-color-gray);
     padding: .5rem 1.25rem;
-    font-weight: bold;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
@@ -191,7 +357,7 @@ button:hover {
     border-radius: 60px;
     border: 1px solid transparent;
     padding: .5rem 1.25rem;
-    transition: all 0.4s
+    transition: all 0.3s
 }
 
 .btn-primary {
@@ -199,12 +365,31 @@ button:hover {
     border-radius: 60px;
     border: 1px solid var(--brand-color-blue);
     padding: .5rem 1.25rem;
-    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
     background-color: var(--bg-blue);
+    transition: all 0.3s ease-in-out
+}
+
+.btn-red {
+    background-color: var(--brand-color-red);
+    border-radius: 60px;
+    border: 1px solid var(--brand-color-red);
+    padding: .5rem 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-red:hover {
+    background-color: var(--bg-red);
     transition: all 0.4s
+}
+
+.btn-whatsapp:hover {
+    background-color: rgb(37, 211, 102);
 }
 
 #main-hero {
@@ -223,7 +408,6 @@ h1 {
     line-height: 1.1;
     font-family: 'Montserrat', system-ui;
     font-weight: 600;
-    text-shadow: var(--brand-color-black) 5px 5px 5px;
 }
 
 .banner-text-container {
@@ -273,7 +457,7 @@ h1 {
 }
 
 .text-overlay span {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.3;
     padding: 20px;
 }
@@ -295,6 +479,10 @@ h1 {
 .container-text, .container-places {
     padding-right: 3rem;
     padding-left: 3rem;
+    margin-bottom: 2rem
+}
+
+.container-places {
     margin-bottom: 4rem
 }
 
@@ -307,7 +495,7 @@ h2 {
 .container-places img {
     width: 400px;
     height: 360px;
-    border-radius: 20px;
+    border-radius: 10px 40px;
     margin-bottom: 0.5rem;
 }
 
@@ -379,7 +567,7 @@ h2 {
 
 .main-story img {
     width: 730px;
-    height: 688px;
+    height: 500px;
     border-radius: 10px;
 }
 
@@ -423,9 +611,10 @@ h2 {
 }
 
 .side-story .category {
-    font-weight: bold;
+    font-family: 'Montserrat', system-ui;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #0073e6;
 }
 
@@ -439,5 +628,29 @@ h2 {
     padding-right: 3rem;
     padding-left: 3rem;
 }
+
+#newsletter {
+    background-color: var(--brand-color-blue);
+    height: 428px;
+}
+
+#social-media {
+    background-color: var(--brand-color-blue);
+    height: 2rem;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.map-styles iframe {
+    overflow: hidden;
+    width: 350px;
+    height: 300px;
+    border: none;
+}
+
 
 
