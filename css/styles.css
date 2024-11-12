@@ -243,9 +243,16 @@
 }
 
 .background-black-solid {
-    background-color: var(--brand-color-black);
+    background-color: var(--brand-color-blue);
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-blue:hover {
+    color: var(--brand-color-blue);
+}
 
 a, li, button{
     cursor: pointer;
