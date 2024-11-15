@@ -3,11 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesion |QuéHayQuito</title>
+    <link rel="icon" type="image/vnd.icon" href="./img/icons/iconQQ.ico">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-    <div class="logo">
-        quéHay<span>Quito</span>
-    </div>
+<body class="background-lblue">
+    <main class="padding-16">
+        <a href="index.html">
+            <div class="logo">
+                <img src="./img/icons/logoQQ.png" alt="logo empresa">
+                <div class="logo-text flex flex-column font-size-20px">
+                    quéHay
+                    <span class="font-bold-900 font-size-24px">Quito</span>                    
+                </div>                
+            </div>
+        </a>
+
+        <div class="flex justify-center text-center ">
+            <div class="min-w background-white padding-16 border-radius-16 border-shadow">
+                <h3 class="font-bold">Bienvenido a QuéHayQuito</h3>
+                <p class="margin-8 small-font-size-12px">Registrate para continuar</p>
+                <div class="flex flex-column">
+                    <button class="margin-8 font-color-blue btn-gray text-lft">
+                        <img src="./img/icons/sm/logo_google.png" alt="Google icon">
+                        <span class="margin-1-rl">
+                            Continuar con Google
+                        </span>
+                    </button>
+                    <button class="margin-8 font-color-blue btn-gray text-lft">
+                        <img src="./img/icons/sm/logo_facebook.png" alt="Facebook icon">
+                        <span class="margin-1-rl">
+                            Continuar con Facebook
+                        </span>
+                    </button>
+                </div>
+                <hr class="margin-8">
+                <h3 class="margin-8 font-bold">¿Ya tienes una cuenta?<h3/>
+                <span class="font-color-blue uppercase">Inicia Sesión</span>
+                <form action="#" class="margin-12">
+                    <div class="flex flex-column">
+                        <div class="margin-8">
+                            <input required type="email" name="email" id="user_email" class="border-black font-normal" placeholder="Correo electrónico*" size="30">
+                        </div>
+                        <div class="margin-8">
+                            <input required type="password" name="user_name" id="user_name" class="border-black font-normal" placeholder="Constraseña*" size="30">
+                        </div>
+                        <div class="margin-8 background-gray flex justify-between padding-16 align-items border-radius-8">
+                            <div class="flex align-items">
+                                <div class="checkbox margin-r-8"></div>
+                                <span class="font-system">No soy un robot</span>
+                            </div>
+                            <img src="./img/icons/sm/logo_recaptcha.png" alt="recatcha" width="40px">
+                        </div>
+                        <div class="flex">
+                            <input checked type="checkbox">
+                            <p class="margin-8 small-font-size-12px text-left">
+                                Quiero recibir emails con recomendaciones de lugares y noticias más relevantes
+                            </p>
+                        </div>
+                        <div class="flex">
+                            <p class=" margin-8 small-font-size-12px">
+                                Al crear una cuenta, aceptas los 
+                                <a href="terms-policy.html" class="small-font-size-12px font-color-blue font-bold underline" target="_blank">
+                                    Terminos de Servicio y Políticas de Privacidad
+                                </a> de QuéHayQuito.
+                            </p>
+                        </div>
+                        <button class="btn-primary font-color-white animation">Continuar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
 </body>
 </html>

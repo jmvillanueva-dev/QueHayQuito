@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <heade >   
-        <nav class="absolute fixed w-full">
+    <header>   
+        <nav class="flex align-items absolute fixed w-full justify-evenly">
             <a href="index.html">
                 <div class="logo">
                     <img src="./img/icons/logoQQ.png" alt="logo empresa">
-                    <div class="logo-text">
+                    <div class="logo-text flex flex-column">
                         quéHay
-                        <span>Quito</span>                    
+                        <span class="font-bold-900 font-size-24px">Quito</span>                    
                     </div>                
                 </div>
             </a>
-            
             <div class="nav-links">
                 <ul>
                     <a href="#destionations"><div>Destinos</div></a>
@@ -35,10 +34,10 @@
                         <img src="./img/icons/ic_search.png" alt="icono búsqueda" />
                         <input type="search" id="bar-search" class="border-black"  size="25" placeholder=" Encuentra lo que buscas..." />
                     </form>
-                    <button>Buscar</button>
+                    <button class="animation">Buscar</button>
                 </div>
                 <a href="singup.html">
-                    <button class="btn-primary font-color-white" >
+                    <button class="btn-primary font-color-white animation border-shadow" >
                         Iniciar sesión
                     </button>
                 </a>
@@ -46,7 +45,7 @@
         </nav>
     </header>
     <main>
-        <section id="main-hero">
+        <section id="main-hero" class="padding-top ">
             <div class="img-container">
                 <div class="img-full">
                     <img src="./img/places/centro-historico.png" alt="centro historico Quito">
@@ -90,7 +89,7 @@
                 </div>
                 <div class="flex justify-between">
                     <h2>¿Cuál es tu próximo destino?</h2>
-                    <button>
+                    <button class="animation">
                         Ver todos los lugares
                     </button>
                 </div>
@@ -146,39 +145,39 @@
             <div class="more-articles flex justify-between">
                 <h2>Explore nuestras últimas historias</h2>
                 <div>
-                    <button>Leer más noticias</button>
-                    <button>Leer más artículos</button>
+                    <button class="animation">Leer más noticias</button>
+                    <button class="animation">Leer más artículos</button>
                 </div>
                 
             </div>
             
             <div class="stories-container">
-                <div class="main-story">
+                <div class="main-story animation">
                     <img src="./img/places/tren-ecuador.png" alt="tren inbambura">
                     <div class="main-story-text">
-                        <span class="category">UN VALIOSO TRANSPORTE</span>
+                        <span class="category">NOTICIAS</span>
                         <h3>El ferrocarril vuelve a recorrer Imbabura</h3>
                         <p>Ago 26, 2024 • Lectura: 6 min </p>
                         <p>La rehabilitación del ferrocarril en Imbabura se convirtió en una realidad. Desde agosto de 2024, las estaciones y la línea férrea fueron refaccionadas, gracias a iniciativas locales públicas y privadas.</p>
                     </div>
                 </div>
                 <div class="side-stories">
-                    <div class="side-story">
+                    <div class="side-story animation border-shadow">
                         <span class="category">FAUNA Y NATURALEZA</span>
                         <h4>10 Parques naturalez que puedes visitar en Quito</h4>
                         <p>Nov 1, 2024 • Lectura: 2 min</p>
                     </div>
-                    <div class="side-story">
+                    <div class="side-story animation border-shadow">
                         <span class="category">ARQUITECTURA</span>
                         <h4>El centro histórico de Quito, un paisaje arquitectónico</h4>
                         <p>Nov 2, 2024 • Lectura: 8 min</p>
                     </div>
-                    <div class="side-story">
+                    <div class="side-story animation border-shadow">
                         <span class="category">PLAYAS</span>
                         <h4>¿Fuera de quito este Feriado? Visita estas playas</h4>
                         <p>Nov 2, 2024 • Lectura: 3 min</p>
                     </div>
-                    <div class="side-story">
+                    <div class="side-story animation border-shadow">
                         <span class="category">FOTOGRAFÍA</span>
                         <h4>13 museos gratis para disfrutar en Quito</h4>
                         <p>Nov 5, 2024 • Lectura: 7 min</p>
@@ -201,7 +200,7 @@
                     <div>
                         <form class="margin-bottom">
                             <input required type="email" class="border-black" placeholder="queHayQuito@email.com" size=50 />
-                            <button class="btn-red font-color-white">¡Unirme ahora!</button>
+                            <button class="btn-red font-color-white animation">¡Unirme ahora!</button>
                         </form>
                         <p class="font-color-white small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="politicas-privacidad.html" class="font-color-white font-bold-2 underline small-font-size-12px" target="_blank">Políticas de Privacidad</a></p>
                     </div>
@@ -225,7 +224,7 @@
                             nos comprometemos a inspirarle para que experimente sus viajes de una forma totalmente nueva. 
                             Nuestra colección de más de 100 libros de seguro que inspirará al viajero que llevas dentro.
                         </p>
-                        <button class="margin-12 font-color-white">Ver todos los libros</button>
+                        <button class="margin-12 font-color-white animation">Ver todos los libros</button>
                     </div>
                 </div>
             </div>
@@ -241,29 +240,27 @@
                         <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
                     </div>
                     <div>
-                        <a href="https://www.facebook.com/" target="_blank">
-                            <img src="./img/icons/sm/facebook.png" alt="facebook icon">
+                        <a href="https://www.facebook.com/"  target="_blank">
+                            <img src="./img/icons/sm/facebook.png" class="animation" alt="facebook icon">
                         </a>
                     </div>
                     <div>
                         <a href="https://www.instagram.com/" target="_blank">
-                            <img src="./img/icons/sm/instagram.png" alt="instagram icon">
+                            <img src="./img/icons/sm/instagram.png" class="animation" alt="instagram icon">
                         </a>
                     </div>
                     <div>
                         <a href="https://x.com/" target="_blank">
-                            <img src="./img/icons/sm/x.png" alt="twitter icon">
+                            <img src="./img/icons/sm/x.png" class="animation" alt="twitter icon">
                         </a>
                     </div>
                     <div>
                         <a href="https://tiktok.com/" target="_blank">
-                            <img src="./img/icons/sm/tiktok.png" alt="tiktok icon">
+                            <img src="./img/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
                         </a>
                     </div>
-                    
                 </div>
             </div>
-            
         </section
     </main>
     <footer id="footer">
@@ -274,9 +271,9 @@
                         <a href="index.html">
                             <div class="logo">
                                 <img src="./img/icons/logoQQ.png" alt="logo empresa">
-                                <div class="logo-text">
+                                <div class="logo-text flex flex-column font-size-20px">
                                     quéHay
-                                    <span>Quito</span>                    
+                                    <span class="font-bold-900 font-size-24px">Quito</span>                    
                                 </div>                
                             </div>
                         </a>
@@ -287,11 +284,15 @@
                     <div>
                         <form class="flex flex-column w-full margin-bottom">
                             <div class="margin-bottom block">
-                                <input required type="email" class="border-black" placeholder="queHayQuito@email.com" size=60 />
+                                <input required type="email" class="border-black font-normal" placeholder="queHayQuito@email.com" size=60 />
                             </div>
-                            <button class="btn-red font-color-white">Suscríbete</button>
+                            <button class="btn-red font-color-white animation">Suscríbete</button>
                         </form>
-                        <p class="small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="politicas-privacidad.html" class="font-bold-2 underline small-font-size-12px">Políticas de Privacidad</a></p>
+                        <p class="small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las 
+                            <a href="terms-policy.html" class="font-bold underline small-font-size-12px font-color-blue" target="_blank">
+                                Políticas de Privacidad
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="flex flex-column">
@@ -299,11 +300,11 @@
                     <div class="flex flex-column">
                         <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
                         <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
-                        <a href="politicas-privacidad.html" class="padding-16-rl margin-bottom text-blue ">Políticas de privacidad</a>
+                        <a href="terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
                     </div>
                     <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
                         <div class="margin-1-rl margin-bottom uppercase">¿Necesitas ayuda? </div>
-                        <button class="btn-whatsapp" >
+                        <button class="btn-whatsapp animation" >
                             <div class="flex align-items">
                                 <img src="./img/icons/sm/whatsapp.png" alt="">
                                 <span class="margin-1-rl">Contáctanos aquí </span>
@@ -314,7 +315,7 @@
                 </div>
                 
                 <div class="map-container flex flex-column align-start">
-                    <h3 class="uppercase margin-bottom">Éncuéntranos en:</h3>
+                    <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
                         <div class="map-styles">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
                             aria-label="Mapa Qué Hay Quito, Ecuador">
@@ -326,8 +327,6 @@
                 &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados. Ninguna parte de este sitio puede ser reproducida sin nuestro permiso.
             </div> 
         </div>
-        
     </footer>
-    
 </body>
 </html>
