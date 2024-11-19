@@ -19,6 +19,11 @@
                     </div>                
                 </div>
             </a>
+            <button class="menu-toggle hidden" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <ul>
                     <a href="#destionations"><div>Destinos</div></a>
@@ -105,6 +110,7 @@
                     <div class="font-size-24px margin-top-0">
                         Iglesia de San Francisco de Quito
                     </div>
+                    <button class="margin-12">Leer más...</button>
                 </div>
                 <div class="flex flex-column">
                     <a href="">
@@ -114,6 +120,7 @@
                     <div class="font-size-24px margin-top-0">
                         Teleférico de Quito
                     </div>
+                    <button class="margin-12">Leer más...</button>
                 </div>
                 <div class="flex flex-column">
                     <a href="">
@@ -123,6 +130,7 @@
                     <div class="font-size-24px margin-top-0">
                         Monumento Mitad del Mundo
                     </div>
+                    <button class="margin-12">Leer más...</button>
                 </div>
             </div>        
         </section>
@@ -329,4 +337,9 @@
         </div>
     </footer>
 </body>
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+</script>
 </html>

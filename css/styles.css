@@ -54,6 +54,11 @@
     font-style: bold;
 }
 
+
+.hidden{
+    visibility: hidden;
+}
+
 .flex {
     display: flex;
 }
@@ -748,4 +753,148 @@ h2 {
     height: 1.4rem;
     border: 1px solid var(--bg-color-gray);
     border-radius: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container-places {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-places > div {
+        width: calc(50% - 1rem);
+        margin-bottom: 2rem;
+    }
+
+    .stories-container {
+        flex-direction: column;
+    }
+
+    .main-story, .side-stories {
+        width: 100%;
+    }
+
+    .main-story img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-story-text {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hidden{
+        visibility: visible;
+    }
+
+    .nav-acctions {
+        visibility: hidden;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .nav-search {
+        margin-bottom: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--brand-color-black);
+        margin: 5px 0;
+    }
+
+    .container-places > div {
+        width: 100%;
+    }
+
+    #newsletter .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #social-media .flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer .flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .map-container {
+        max-width: 100%;
+    }
+
+    .map-styles iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .container-text, .container-places {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .video-container .overlay h3 {
+        font-size: 2.5rem;
+    }
+
+    .video-container .overlay p {
+        font-size: 2rem;
+    }
+
+    .main-story-text h3 {
+        font-size: 1.2rem;
+    }
 }
