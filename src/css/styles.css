@@ -1,9 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family:'Montserrat Alternates',system-ui;
     font-weight: 400;
-    font-size: 16px;
+}
+
+html {
+    font-size: 14px;
 }
 
 :root {
@@ -56,7 +60,7 @@
 
 
 .hidden{
-    visibility: hidden;
+    display: none;
 }
 
 .flex {
@@ -125,8 +129,14 @@
 .min-w {
     width: 23rem;
 }
+
 .max-w {
     max-width: 48rem;
+}
+
+.w-90 {
+    width: 90%;
+    max-width: 1500px;
 }
 
 .w-full {
@@ -144,6 +154,10 @@
 .container {
     margin: 0 auto;
     padding: 0 20px;
+    width: 90%;
+    max-width: 1400px;
+    min-width: 320px;
+    box-sizing: border-box;
 }
 
 .h-full {
@@ -158,13 +172,13 @@
     position: relative;
 }
 
-.hidden {
-    visibility: hidden;
-}
-
 .fixed {
     position: fixed;
     z-index: 100;
+}
+
+.sticky {
+    position: sticky;
 }
 
 .padding-top {
@@ -192,6 +206,10 @@
 
 .padding-32 {
     padding: 2rem;
+}
+
+.margin-auto {
+    margin: auto;
 }
 
 .margin-1-rl {
@@ -303,7 +321,7 @@
     font-weight: 600;
 }
 
-.background-white {
+.bg-white {
     background-color: var(--bg-white);
 }
 
@@ -337,16 +355,18 @@
 }
 
 a, li, button{
-    cursor: pointer;
+    display: inline-block;
     text-decoration: none;
     list-style: none;
     color: var(--brand-color-black);
+    margin: 0;
+    cursor: pointer;
 }
 
 nav {
     background-color: var(--bg-white);
-    height: 64px;
-    column-gap: 1rem;
+    height: auto;
+    padding: 0.75rem;
 }
 
 .logo {
@@ -356,8 +376,8 @@ nav {
 }
 
 .logo img{
-    width: 55px;
-    height: 50px;
+    width: 45px;
+    height: 40px;
     box-sizing: border-box;
     margin: 0px 5px;
 }
@@ -401,14 +421,17 @@ nav {
 .nav-search form{
     display: flex;
     align-items: center;
-    margin: 0 5px;
+    margin: 0 8px;
+}
+
+.border-magenta {
+    border: 2px solid magenta;
 }
 
 .border-black {
     border: 1px solid var(--bg-color-gray);
     border-radius: 60px;
     height: 30px;
-    margin: 0 5px;
     padding: 2px 15px;
 }
 
@@ -435,8 +458,7 @@ button {
     background-color: transparent;
     border-radius: 60px;
     border: 1px solid var(--bg-color-gray);
-    padding: .5rem 1.25rem;
-    font-weight: 400;
+    padding: .5rem 0.75rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -446,21 +468,19 @@ button:hover {
     color: var(--bg-white);
     border-radius: 60px;
     border: 1px solid transparent;
-    padding: .5rem 1.25rem;
 }
 
 .btn-primary {
     background-color: var(--brand-color-blue);
     border-radius: 60px;
     border: 1px solid var(--brand-color-blue);
-    padding: .5rem 1.25rem;
+    padding: .5rem 0.75rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
     background-color: var(--bg-blue);
-    transition: all 0.3s ease-in-out
 }
 
 .btn-red {
@@ -472,9 +492,15 @@ button:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.btn-close {
+    width: 15%;
+    box-shadow: none;
+    background-color: var(--brand-color-blue);
+    margin: 0;
+}
+
 .btn-red:hover {
     background-color: var(--bg-red);
-    transition: all 0.4s
 }
 
 .btn-gray:hover {
@@ -755,7 +781,7 @@ h2 {
     border-radius: 4px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
     .container-places {
         flex-wrap: wrap;
         justify-content: center;
@@ -785,53 +811,86 @@ h2 {
     }
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 12px;
     }
 
-    .nav-links {
-        display: none;
-        width: 100%;
-        background-color: #fff;
-    }
-
-    .nav-links.active {
+    .hidden {
         display: block;
     }
 
-    .nav-links ul {
+    .menu-toggle {
+        margin: 0px 1rem;
+    }
+
+    nav {
+        visibility: hidden;
+        position: fixed;
+        width: 55%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--bg-light-gray);
+        padding:2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    
+
+    button a span {
+        display: none;
+        visibility: hidden;
+    }
+
+    .visible {
+        visibility: visible;
+    }
+
+    .nav-bar {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .nav-links {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
     }
 
     .nav-links ul li {
         margin: 0.5rem 0;
+
     }
 
-    .hidden{
-        visibility: visible;
-    }
-
-    .nav-acctions {
-        visibility: hidden;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
+    .nav-links div {
+        text-align: start;
+        border-bottom: 2px solid var(--brand-color-blue);
     }
 
     .nav-search {
-        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: end;
+        width: 80%;
     }
 
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
+    nav button, a {
+        width: 100%;
+        margin: .8rem;
+        font-size: 12px;
+    }
+
+    nav form {
+        width: 100%;
+    }
+
+    input[type="search"]{
+        font-size: 12px;
+        width: 100%;
     }
 
     .menu-toggle span {
@@ -872,7 +931,13 @@ h2 {
     }
 }
 
+
 @media screen and (max-width: 480px) {
+
+    html {
+        font-size: 10px;
+    }
+    
     h1 {
         font-size: 2.5rem;
     }

@@ -5,82 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuéHayQuito | Información Turística</title>
     <link rel="icon" type="image/vnd.icon" href="./img/icons/iconQQ.ico">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
-    <header>   
-        <nav class="flex align-items absolute fixed w-full justify-evenly">
+    <header class="w-full bg-white fixed">
+        <div class="flex container align-items justify-between ">
             <a href="index.html">
                 <div class="logo">
-                    <img src="./img/icons/logoQQ.png" alt="logo empresa">
+                    <img src="./src/images/icons/logoQQ.png" alt="logo empresa">
                     <div class="logo-text flex flex-column">
                         quéHay
                         <span class="font-bold-900 font-size-24px">Quito</span>                    
                     </div>                
                 </div>
             </a>
-            <button class="menu-toggle hidden" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <ul>
-                    <a href="#destionations"><div>Destinos</div></a>
-                    <a href="#suggestions"><div>Sugerencias</div></a>
-                    <a href="#latest-stories"><div>Blog</div></a>
-                    <a href="#store"><div>Tienda</div></a>
-                    <a href="#footer"><div>Contáctanos</div></a>
-                </ul>
-            </div>
-            <div class="nav-acctions">
-                <div class="nav-search">
-                    <form action="">
-                        <img src="./img/icons/ic_search.png" alt="icono búsqueda" />
-                        <input type="search" id="bar-search" class="border-black"  size="25" placeholder=" Encuentra lo que buscas..." />
-                    </form>
-                    <button class="animation">Buscar</button>
-                </div>
-                <a href="singup.html">
-                    <button class="btn-primary font-color-white animation border-shadow" >
-                        Iniciar sesión
-                    </button>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="main-hero" class="padding-top ">
-            <div class="img-container">
-                <div class="img-full">
-                    <img src="./img/places/centro-historico.png" alt="centro historico Quito">
-                    <div class="text-overlay">
-                        <span>Arquitectura e historia: Las 5 iglesias más impresionantes de Quito</span>
-                        <a href="">
-                            <img src="./img/icons/ic_next.png" alt="icon next">
-                        </a>
+            
+            <nav id="nav">
+                <div class="nav-bar flex align-items">
+                    <div class="nav-links">
+                        <button id="btn-close" class="btn-close font-bold font-color-white hidden">X</button>
+                        <ul>
+                            <a href="#destionations"><div>Destinos</div></a>
+                            <a href="#suggestions"><div>Sugerencias</div></a>
+                            <a href="#latest-stories"><div>Blog</div></a>
+                            <a href="#store"><div>Tienda</div></a>
+                            <a href="#footer"><div>Contáctanos</div></a>
+                        </ul>
                     </div>
-                </div>
-                <div class="img-full">
-                    <img src="./img/places/iglesia-compania.png" alt="iglesia la compania">
-                    <div class="text-overlay">
-                        <span>Un ícono del barroco en América Latina: la majestuosa Iglesia de la Compañía de Jesús</span>
-                        <a href="">
-                            <img src="./img/icons/ic_next.png" alt="icon next">
-                        </a>
+                    <div class="nav-search">
+                        <form action="">
+                            <img src="./src/images/icons/ic_search.png" alt="icono búsqueda" />
+                            <input type="search" id="bar-search" class="border-black" size="25"  placeholder=" Encuentra lo que buscas..." />
+                        </form>
+                        <button class="animation">Buscar</button>
                     </div>
                     
                 </div>
+                
+            </nav>
+            <button id="btn-open" class="menu-toggle hidden" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+        </button>
+            
+            <button class="btn-primary font-color-white animation border-shadow" >
+                <a href="./src/pages/login.html">
+                    <div class="flex align-items gap-8 font-color-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16"><path fill="white" d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3"/><path fill="white" fill-rule="evenodd" d="M16 8c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8M4 13.75C4.16 13.484 5.71 11 7.99 11c2.27 0 3.83 2.49 3.99 2.75A6.98 6.98 0 0 0 14.99 8c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 2.38 1.19 4.49 3.01 5.75" clip-rule="evenodd"/></svg>
+                        <span >Iniciar sesión</span>
+                    </div>
+                </a>
+            </button>
+        </div>   
+    </header>
+
+    <main>
+        <section id="main-hero" class="padding-top">
+            <div class="img-container">
                 <div class="img-full">
-                    <img src="./img/places/virgen-panecillo-quito.png" alt="virgen panecillo quito">
+                    <img src="./src/images/places/centro-historico.png" alt="centro historico Quito">
+                    <div class="text-overlay">
+                        <span>Arquitectura e historia: Las 5 iglesias más impresionantes de Quito</span>
+                        <a href="">
+                            <img src="./src/images/icons/ic_next.png" alt="icon next">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="img-full">
+                    <img src="./src/images/places/iglesia-compania.png" alt="iglesia la compania">
+                    <div class="text-overlay">
+                        <span>Un ícono del barroco en América Latina: la majestuosa Iglesia de la Compañía de Jesús</span>
+                        <a href="">
+                            <img src="./src/images/icons/ic_next.png" alt="icon next">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="img-full">
+                    <img src="./src/images/places/virgen-panecillo-quito.png" alt="virgen panecillo quito">
                     <div class="text-overlay">
                         <span>El Panecillo: Un cerro Emblemático con las Mejores Vistas de la Ciudad</span>
                         <a href="">
-                            <img src="./img/icons/ic_next.png" alt="icon next">
+                            <img src="./src/images/icons/ic_next.png" alt="icon next">
                         </a>
                     </div>
                 </div>                
-                
             </div>
             <div class="banner-text-container">
                 <h1>Descubre lugares dignos de visitar</h1>
@@ -88,117 +99,120 @@
         </section>
 
         <section id="destionations">
-            <div class="container-text flex flex-column">
-                <div class="uppercase">
-                    Planifica tu viaje
+            <div class="container">
+                <div class="container-text flex flex-column">
+                    <div class="uppercase">
+                        Planifica tu viaje
+                    </div>
+                    <div class="flex justify-between">
+                        <h2>¿Cuál es tu próximo destino?</h2>
+                        <button class="animation">
+                            Ver todos los lugares
+                        </button>
+                    </div>
                 </div>
-                <div class="flex justify-between">
-                    <h2>¿Cuál es tu próximo destino?</h2>
-                    <button class="animation">
-                        Ver todos los lugares
-                    </button>
-                </div>
-            </div>
             
-            <div class="container-places flex justify-between">
-                
-                <div class="flex flex-column"> 
-                    <a href="">
-                        <img src="./img/places/iglesia-san-francisco.png" alt="">
-                    </a>
-                    <span class="label">TEMPLOS</span>
-                    <div class="font-size-24px margin-top-0">
-                        Iglesia de San Francisco de Quito
+                <div class="container-places flex justify-between">
+                    <div class="flex flex-column"> 
+                        <a href="">
+                            <img src="./src/images/places/iglesia-san-francisco.png" alt="">
+                        </a>
+                        <span class="label">TEMPLOS</span>
+                        <div class="font-size-24px margin-top-0">
+                            Iglesia de San Francisco de Quito
+                        </div>
+                        <button class="margin-12">Leer más...</button>
                     </div>
-                    <button class="margin-12">Leer más...</button>
-                </div>
-                <div class="flex flex-column">
-                    <a href="">
-                        <img src="./img/places/teleferico-quito.png" alt="">
-                    </a>
-                    <span class="label">MIRADOR</span>
-                    <div class="font-size-24px margin-top-0">
-                        Teleférico de Quito
-                    </div>
-                    <button class="margin-12">Leer más...</button>
-                </div>
-                <div class="flex flex-column">
-                    <a href="">
-                        <img src="./img/places/monumento-mitad-mundo.png" alt="">
-                    </a>
-                    <span class="label">MUSEOS</span>
-                    <div class="font-size-24px margin-top-0">
-                        Monumento Mitad del Mundo
-                    </div>
-                    <button class="margin-12">Leer más...</button>
-                </div>
-            </div>        
-        </section>
 
-        <section id="suggestions">
-            <div class="video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="./videos/visiting-quito.mp4" type="video/mp4">
-                    Tu navegador no soporta la equiteta de video.
-                </video>
-                <div class="overlay flex flex-column">
-                    <h3>Top lugares Quito</h3>
-                    <p>2024</p>
-                    <a href="https://youtu.be/8MVh_6Nnx3c?si=wUvp6ZFTSKep1Xwr" class="btn-primary font-color-white" target="_blank">Descubre más...</a>
-                </div>
-            </div>
-        </section>
+                    <div class="flex flex-column">
+                        <a href="">
+                            <img src="./src/images/places/teleferico-quito.png" alt="">
+                        </a>
+                        <span class="label">MIRADOR</span>
+                        <div class="font-size-24px margin-top-0">
+                            Teleférico de Quito
+                        </div>
+                        <button class="margin-12">Leer más...</button>
+                    </div>
+                    <div class="flex flex-column">
+                        <a href="">
+                            <img src="./src/images/places/monumento-mitad-mundo.png" alt="">
+                        </a>
+                        <span class="label">MUSEOS</span>
+                        <div class="font-size-24px margin-top-0">
+                            Monumento Mitad del Mundo
+                        </div>
+                        <button class="margin-12">Leer más...</button>
+                    </div>
+                </div> 
+            </div>      
+            </section>
 
-        <section id="latest-stories">
-            <div class="more-articles flex justify-between">
-                <h2>Explore nuestras últimas historias</h2>
-                <div>
-                    <button class="animation">Leer más noticias</button>
-                    <button class="animation">Leer más artículos</button>
-                </div>
-                
-            </div>
-            
-            <div class="stories-container">
-                <div class="main-story animation">
-                    <img src="./img/places/tren-ecuador.png" alt="tren inbambura">
-                    <div class="main-story-text">
-                        <span class="category">NOTICIAS</span>
-                        <h3>El ferrocarril vuelve a recorrer Imbabura</h3>
-                        <p>Ago 26, 2024 • Lectura: 6 min </p>
-                        <p>La rehabilitación del ferrocarril en Imbabura se convirtió en una realidad. Desde agosto de 2024, las estaciones y la línea férrea fueron refaccionadas, gracias a iniciativas locales públicas y privadas.</p>
+            <section id="suggestions">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="./src/videos/visiting-quito.mp4" type="video/mp4">
+                        Tu navegador no soporta la equiteta de video.
+                    </video>
+                    <div class="overlay flex flex-column">
+                        <h3>Top lugares Quito</h3>
+                        <p>2024</p>
+                        <a href="https://youtu.be/8MVh_6Nnx3c?si=wUvp6ZFTSKep1Xwr" class="btn-primary font-color-white" target="_blank">Descubre más...</a>
                     </div>
                 </div>
-                <div class="side-stories">
-                    <div class="side-story animation border-shadow">
-                        <span class="category">FAUNA Y NATURALEZA</span>
-                        <h4>10 Parques naturalez que puedes visitar en Quito</h4>
-                        <p>Nov 1, 2024 • Lectura: 2 min</p>
+            </section>
+
+            <section id="latest-stories">
+                <div class="container">
+                    <div class="more-articles flex justify-between">
+                        <h2>Explore nuestras últimas historias</h2>
+                        <div>
+                            <button class="animation">Leer más noticias</button>
+                            <button class="animation">Leer más artículos</button>
+                        </div>
                     </div>
-                    <div class="side-story animation border-shadow">
-                        <span class="category">ARQUITECTURA</span>
-                        <h4>El centro histórico de Quito, un paisaje arquitectónico</h4>
-                        <p>Nov 2, 2024 • Lectura: 8 min</p>
-                    </div>
-                    <div class="side-story animation border-shadow">
-                        <span class="category">PLAYAS</span>
-                        <h4>¿Fuera de quito este Feriado? Visita estas playas</h4>
-                        <p>Nov 2, 2024 • Lectura: 3 min</p>
-                    </div>
-                    <div class="side-story animation border-shadow">
-                        <span class="category">FOTOGRAFÍA</span>
-                        <h4>13 museos gratis para disfrutar en Quito</h4>
-                        <p>Nov 5, 2024 • Lectura: 7 min</p>
+                    
+                    <div class="stories-container">
+                        <div class="main-story animation">
+                            <img src="./src/images/places/tren-ecuador.png" alt="tren inbambura">
+                            <div class="main-story-text">
+                                <span class="category">NOTICIAS</span>
+                                <h3>El ferrocarril vuelve a recorrer Imbabura</h3>
+                                <p>Ago 26, 2024 • Lectura: 6 min </p>
+                                <p>La rehabilitación del ferrocarril en Imbabura se convirtió en una realidad. Desde agosto de 2024, las estaciones y la línea férrea fueron refaccionadas, gracias a iniciativas locales públicas y privadas.</p>
+                            </div>
+                        </div>
+                        <div class="side-stories">
+                            <div class="side-story animation border-shadow">
+                                <span class="category">FAUNA Y NATURALEZA</span>
+                                <h4>10 Parques naturalez que puedes visitar en Quito</h4>
+                                <p>Nov 1, 2024 • Lectura: 2 min</p>
+                            </div>
+                            <div class="side-story animation border-shadow">
+                                <span class="category">ARQUITECTURA</span>
+                                <h4>El centro histórico de Quito, un paisaje arquitectónico</h4>
+                                <p>Nov 2, 2024 • Lectura: 8 min</p>
+                            </div>
+                            <div class="side-story animation border-shadow">
+                                <span class="category">PLAYAS</span>
+                                <h4>¿Fuera de quito este Feriado? Visita estas playas</h4>
+                                <p>Nov 2, 2024 • Lectura: 3 min</p>
+                            </div>
+                            <div class="side-story animation border-shadow">
+                                <span class="category">FOTOGRAFÍA</span>
+                                <h4>13 museos gratis para disfrutar en Quito</h4>
+                                <p>Nov 5, 2024 • Lectura: 7 min</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
         <section id="newsletter">
             <div class="flex w-full h-full relative align-items justify-center">
                 <div class="flex flex-column text-center max-w" >
                     <div>
-                        <img src="./img/icons/newsletter.png" alt="" width="100px" height="100px">
+                        <img src="./src/images/icons/newsletter.png" alt="" width="100px" height="100px">
                     </div>
                     <div>
                         <p class="font-color-white font-bold font-size-48px margin-bottom">
@@ -210,136 +224,145 @@
                             <input required type="email" class="border-black" placeholder="queHayQuito@email.com" size=50 />
                             <button class="btn-red font-color-white animation">¡Unirme ahora!</button>
                         </form>
-                        <p class="font-color-white small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="politicas-privacidad.html" class="font-color-white font-bold-2 underline small-font-size-12px" target="_blank">Políticas de Privacidad</a></p>
+                        <p class="font-color-white small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="./src/pages/terms-policy.html" class="font-color-white font-bold-2 underline small-font-size-12px" target="_blank">Políticas de Privacidad</a></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="store" class="relative margin-top">
-            <img src="./img/store-items/portada-marketing.jpeg" class="object-cover w-full h-full"  alt="marketing portada libros">
-            <div class="background-black absolute margin-64 padding-32 top-0 left-0 font-color-white">
-                <div class="w-full width-96">
-                    <div class="uppercase margin-12" >
-                    Aquiere nuestros libros
-                    </div>
-                    <div class="margin-12">
-                        <h2>¡Las mejores guías de viaje, historias y leyendas!</h2>
-                    </div>
-                    <div>
-                        <p class="margin-12">
-                            Tanto si está interesado en viajar a la ciudad de Quito, como en hacer un tour o probar un nuevo plato, 
-                            nos comprometemos a inspirarle para que experimente sus viajes de una forma totalmente nueva. 
-                            Nuestra colección de más de 100 libros de seguro que inspirará al viajero que llevas dentro.
-                        </p>
-                        <button class="margin-12 font-color-white animation">Ver todos los libros</button>
+            <img src="./src/images/store-items/portada-marketing.jpeg" class="object-cover w-full h-full"  alt="marketing portada libros">
+            <div class="container">
+                <div class="background-black absolute margin-64 padding-32 top-0 left-0 font-color-white">
+                    <div class="w-full width-96">
+                        <div class="uppercase margin-12" >
+                        Aquiere nuestros libros
+                        </div>
+                        <div class="margin-12">
+                            <h2>¡Las mejores guías de viaje, historias y leyendas!</h2>
+                        </div>
+                        <div>
+                            <p class="margin-12">
+                                Tanto si está interesado en viajar a la ciudad de Quito, como en hacer un tour o probar un nuevo plato, 
+                                nos comprometemos a inspirarle para que experimente sus viajes de una forma totalmente nueva. 
+                                Nuestra colección de más de 100 libros de seguro que inspirará al viajero que llevas dentro.
+                            </p>
+                            <button class="margin-12 font-color-white animation">Ver todos los libros</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="social-media" class="padding-80">
-            <div class="flex align-items justify-between padding-32-rl">
-                <div>
-                    <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
-                </div>
-                <div class="flex align-items gap-8">
+            <div class="container">
+                <div class="flex align-items justify-between padding-32-rl">
                     <div>
-                        <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                        <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
                     </div>
-                    <div>
-                        <a href="https://www.facebook.com/"  target="_blank">
-                            <img src="./img/icons/sm/facebook.png" class="animation" alt="facebook icon">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.instagram.com/" target="_blank">
-                            <img src="./img/icons/sm/instagram.png" class="animation" alt="instagram icon">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://x.com/" target="_blank">
-                            <img src="./img/icons/sm/x.png" class="animation" alt="twitter icon">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://tiktok.com/" target="_blank">
-                            <img src="./img/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section
-    </main>
-    <footer id="footer">
-        <div class="flex flex-column">
-            <div class="flex align-items justify-between padding-32">
-                <div class="flex flex-column">
-                    <div class=" flex align-items justify-between margin-bottom">
-                        <a href="index.html">
-                            <div class="logo">
-                                <img src="./img/icons/logoQQ.png" alt="logo empresa">
-                                <div class="logo-text flex flex-column font-size-20px">
-                                    quéHay
-                                    <span class="font-bold-900 font-size-24px">Quito</span>                    
-                                </div>                
-                            </div>
-                        </a>
+                    <div class="flex align-items gap-8">
                         <div>
-                            <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                            <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/"  target="_blank">
+                                <img src="./src/images/icons/sm/facebook.png" class="animation" alt="facebook icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img src="./src/images/icons/sm/instagram.png" class="animation" alt="instagram icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="./src/images/icons/sm/x.png" class="animation" alt="twitter icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://tiktok.com/" target="_blank">
+                                <img src="./src/images/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
+                            </a>
                         </div>
                     </div>
-                    <div>
-                        <form class="flex flex-column w-full margin-bottom">
-                            <div class="margin-bottom block">
-                                <input required type="email" class="border-black font-normal" placeholder="queHayQuito@email.com" size=60 />
-                            </div>
-                            <button class="btn-red font-color-white animation">Suscríbete</button>
-                        </form>
-                        <p class="small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las 
-                            <a href="terms-policy.html" class="font-bold underline small-font-size-12px font-color-blue" target="_blank">
-                                Políticas de Privacidad
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <div class="flex flex-column">
-                    <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
-                    <div class="flex flex-column">
-                        <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
-                        <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
-                        <a href="terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
-                    </div>
-                    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
-                        <div class="margin-1-rl margin-bottom uppercase">¿Necesitas ayuda? </div>
-                        <button class="btn-whatsapp animation" >
-                            <div class="flex align-items">
-                                <img src="./img/icons/sm/whatsapp.png" alt="">
-                                <span class="margin-1-rl">Contáctanos aquí </span>
-                            </div>
-                        </button>
-                    </a>
-                    
-                </div>
-                
-                <div class="map-container flex flex-column align-start">
-                    <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
-                        <div class="map-styles">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
-                            aria-label="Mapa Qué Hay Quito, Ecuador">
-                        </iframe>
-                </div>
                 </div>
             </div>
-            <div class="padding-32 background-black-solid font-color-white small-font-size-12px text-center ">
+        </section>
+    </main>
+        <footer id="footer" class="background-black-solid ">
+            <div class="bg-white">
+                <div class="container">
+                    <div class="flex flex-column">
+                        <div class="flex align-items justify-between padding-32 ">
+                            <div class="flex flex-column">
+                                <div class=" flex align-items justify-between margin-bottom">
+                                    <a href="index.html">
+                                        <div class="logo">
+                                            <img src="./src/images/icons/logoQQ.png" alt="logo empresa">
+                                            <div class="logo-text flex flex-column font-size-20px">
+                                                quéHay
+                                                <span class="font-bold-900 font-size-24px">Quito</span>                    
+                                            </div>                
+                                        </div>
+                                    </a>
+                                    <div>
+                                        <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form class="flex flex-column w-full margin-bottom">
+                                        <div class="margin-bottom block">
+                                            <input required type="email" class="border-black font-normal" placeholder="queHayQuito@email.com" size=60 />
+                                        </div>
+                                        <button class="btn-red font-color-white animation">Suscríbete</button>
+                                    </form>
+                                    <p class="small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las 
+                                        <a href="./src/pages/terms-policy.html" class="font-bold underline small-font-size-12px font-color-blue" target="_blank">
+                                            Políticas de Privacidad
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-column">
+                                <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
+                                <div class="flex flex-column">
+                                    <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
+                                    <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
+                                    <a href="./src/pages/terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
+                                </div>
+                                <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
+                                    <div class="margin-1-rl margin-bottom uppercase">¿Necesitas ayuda? </div>
+                                    <button class="btn-whatsapp animation" >
+                                        <div class="flex align-items">
+                                            <img src="./src/images/icons/sm/whatsapp.png" alt="">
+                                            <span class="margin-1-rl">Contáctanos aquí </span>
+                                        </div>
+                                    </button>
+                                </a>
+                                
+                            </div>
+                            
+                            <div class="map-container flex flex-column align-start">
+                                <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
+                                <div class="map-styles">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
+                                    aria-label="Mapa Qué Hay Quito, Ecuador">
+                                </iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                     
+                </div>
+            </div>
+            <div class="padding-32 font-color-white small-font-size-12px text-center">
                 &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados. Ninguna parte de este sitio puede ser reproducida sin nuestro permiso.
-            </div> 
-        </div>
-    </footer>
+            </div>
+        </footer>
+
+        <!-- Archivos script -->
+        <script src="./src/js/main.js"></script>
 </body>
-<script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
-    });
-</script>
+
 </html>
