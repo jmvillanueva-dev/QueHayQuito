@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Lugares en Quito | QuéHayQuito</title>
+    <link rel="icon" type="image/vnd.icon" href="../images/icons/iconQQ.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="w-full bg-white fixed">
+        <div class="flex container align-items justify-between">
+            <a href="../../index.html">
+                <div class="logo">
+                    <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                    <div class="logo-text flex flex-column">
+                        quéHay
+                        <span class="font-bold-900 font-size-24px">Quito</span>                    
+                    </div>                
+                </div>
+            </a>
+            
+            <div class="flex align-items">
+                <nav id="nav">
+                    <div class="nav-bar flex align-items">
+                        <div class="nav-search">
+                            <form action="">
+                                <img src="../images/icons/ic_search.png" alt="icono búsqueda" />
+                                <input type="search" id="bar-search" class="border-black" size="25"  placeholder=" Encuentra lo que buscas..." />
+                            </form>
+                            <button class="animation">Buscar</button>
+                        </div>
+                    </div>
+                </nav>
+                <button class="btn-primary font-color-white animation border-shadow" >
+                    <a href="./src/pages/login.html">
+                        <div class="flex align-items gap-8 font-color-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16"><path fill="white" d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3"/><path fill="white" fill-rule="evenodd" d="M16 8c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8M4 13.75C4.16 13.484 5.71 11 7.99 11c2.27 0 3.83 2.49 3.99 2.75A6.98 6.98 0 0 0 14.99 8c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 2.38 1.19 4.49 3.01 5.75" clip-rule="evenodd"/></svg>
+                            <span >Iniciar sesión</span>
+                        </div>
+                    </a>
+                </button>
+            </div>
+            
+        </div>   
+    </header>
+
+    <main>
+        <section id="main-hero-top-places" class="padding-top">
+            <div class="img-container">
+                <div class="img-full">
+                    <img src="../images/places/Plaza_Grande_Quito_Ecuador.jpg" alt="centro historico Quito">
+                    <div class="text-overlay-tp">
+                        <span>Descubre los mejores lugares de Quito según los visitantes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-text-container font-bold-2">
+                <h1>TOP lugares en Quito</h1>
+            </div>           
+        </section>
+
+        <section id="filter-section" class="container">
+            <div class="filter-header">
+                <h2>Filtros personalizados</h2>
+                <button class="discard-btn btn-gray">Limpiar</button>
+            </div>
+            
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label>Categoría</label>
+                    <select class="filter-select" id="category-filter">
+                        <option value="">Todas las categorías</option>
+                        <option value="bares">Bares</option>
+                        <option value="parques">Parques</option>
+                        <option value="nocturnos">Lugares Nocturnos</option>
+                        <option value="hoteles">Hoteles</option>
+                        <option value="restaurantes">Restaurantes</option>
+                    </select>
+                </div>
+        
+                <div class="filter-group">
+                    <label>Zona</label>
+                    <select class="filter-select" id="zone-filter">
+                        <option value="">Todas las zonas</option>
+                        <option value="norte">Norte</option>
+                        <option value="centro">Centro Histórico</option>
+                        <option value="sur">Sur</option>
+                        <option value="valles">Valles</option>
+                    </select>
+                </div>
+        
+                <div class="filter-group">
+                    <label>Calificación</label>
+                    <select class="filter-select" id="rating-filter">
+                        <option value="">Todas las calificaciones</option>
+                        <option value="5">5 estrellas</option>
+                        <option value="4">4+ estrellas</option>
+                        <option value="3">3+ estrellas</option>
+                    </select>
+                </div>
+        
+                <div class="filter-group">
+                    <label>Precio</label>
+                    <select class="filter-select" id="price-filter">
+                        <option value="">Todos los precios</option>
+                        <option value="economico">Económico</option>
+                        <option value="moderado">Moderado</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="active-filters">
+                <div class="filter-tag" data-category="bares">
+                    Filtros
+                    <span class="remove-tag">×</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="top-places" class="container line-height">
+            <div class="place-card" data-category="parques" data-zone="norte" data-rating="5" data-price="economico">
+                <img src="../images/places/parque_metropolitano.jpg" alt="Parque Metropolitano">
+                <div class="place-info">
+                    <span class="label">PARQUE</span>
+                    <h3>Parque Metropolitano</h3>
+                    <p class="place-description">"Un oasis verde en medio de la ciudad. Perfecto para hacer ejercicio y disfrutar de la naturaleza."<br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@maria_dono</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐⭐</span><br>
+                        <span class="tag">Norte</span><br>
+                        <span class="tag">Económico</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="bares" data-zone="centro" data-rating="4" data-price="moderado">
+                <img src="../images/places/bandido-brewing.jpg" alt="Bandido Brewing">
+                <div class="place-info">
+                    <span class="label">BAR</span>
+                    <h3>Bandido Brewing</h3>
+                    <p class="place-description">"Cerveza artesanal increíble y ambiente acogedor. Un must para los amantes de la cerveza." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@johnBackpag</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span><br>
+                        <span class="tag">Centro Histórico</span><br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="nocturnos" data-zone="norte" data-rating="4" data-price="moderado">
+                <img src="../images/places/bungalow-6.jpg" alt="Bungalow 6">
+                <div class="place-info">
+                    <span class="label">NOCTURNO</span>
+                    <h3>Bungalow 6</h3>
+                    <p class="place-description">"El mejor lugar para bailar en La Mariscal. Música variada y buen ambiente." - 
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@ana_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span><br>
+                        <span class="tag">Norte</span><br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="hoteles" data-zone="centro" data-rating="5" data-price="premium">
+                <img src="../images/places/casa-gangotena.jpg" alt="Casa Gangotena">
+                <div class="place-info">
+                    <span class="label">HOTEL</span>
+                    <h3>Casa Gangotena</h3>
+                    <p class="place-description">"Lujo en el corazón del Centro Histórico. Las vistas desde la terraza son impresionantes." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@carlos_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Centro Histórico</span> <br>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="restaurantes" data-zone="norte" data-rating="5" data-price="premium">
+                <img src="../images/places/zazu.jpg" alt="Zazu">
+                <div class="place-info">
+                    <span class="label">RESTAURANTE</span>
+                    <h3>Zazu</h3>
+                    <p class="place-description">"Cocina de autor con ingredientes locales. Una experiencia gastronómica única." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@laura_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Norte</span> <br>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="parques" data-zone="centro" data-rating="4" data-price="economico">
+                <img src="../images/places/parque-itchimbia.jpg" alt="Parque Itchimbía">
+                <div class="place-info">
+                    <span class="label">PARQUE</span>
+                    <h3>Parque Itchimbía</h3>
+                    <p class="place-description">"Las mejores vistas panorámicas de Quito. Ideal para un picnic al atardecer." <br> 
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@pablo_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Centro</span> <br>
+                        <span class="tag">Económico</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="bares" data-zone="centro" data-rating="4" data-price="moderado">
+                <img src="../images/places/la-ronda.jpg" alt="La Ronda">
+                <div class="place-info">
+                    <span class="label">BAR</span>
+                    <h3>La Ronda</h3>
+                    <p class="place-description">"Calle llena de bares tradicionales. No te pierdas el canelazo en una noche fría." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@sofia_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Centro Histórico</span> <br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="nocturnos" data-zone="centro" data-rating="4" data-price="moderado">
+                <img src="../images/places/casa-cultura.jpg" alt="Casa de la Cultura">
+                <div class="place-info">
+                    <span class="label">NOCTURNO</span>
+                    <h3>Casa de la Cultura</h3>
+                    <p class="place-description">"Eventos culturales nocturnos imperdibles. Desde conciertos hasta obras de teatro." <br> 
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@diego_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Centro</span> <br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="hoteles" data-zone="centro" data-rating="5" data-price="premium">
+                <img src="../images/places/illa-experience-hotel.jpg" alt="Illa Experience Hotel">
+                <div class="place-info">
+                    <span class="label">HOTEL</span>
+                    <h3>Illa Experience Hotel</h3>
+                    <p class="place-description">"Boutique hotel con experiencias culturales únicas. El servicio es excepcional." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@emma_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">Centro Histórico</span> <br>
+                        <span class="tag">⭐⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="restaurantes" data-zone="centro" data-rating="5" data-price="premium">
+                <img src="../images/places/urko.jpg" alt="Urko">
+                <div class="place-info">
+                    <span class="label">RESTAURANTE</span>
+                    <h3>Urko</h3>
+                    <p class="place-description">"Cocina ecuatoriana moderna. El menú de degustación es una aventura culinaria." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@andres_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Centro</span> <br>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="parques" data-zone="sur" data-rating="4" data-price="economico">
+                <img src="../images/places/parque-las-cuadras.jpg" alt="Parque Las Cuadras">
+                <div class="place-info">
+                    <span class="label">PARQUE</span>
+                    <h3>Parque Las Cuadras</h3>
+                    <p class="place-description">"Un espacio verde ideal para familias. Tiene senderos para caminar y áreas de juego." <br> 
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@luisa_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Sur</span> <br>
+                        <span class="tag">Económico</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="bares" data-zone="norte" data-rating="4" data-price="moderado">
+                <img src="../images/places/la-oficina.jpg" alt="La Oficina">
+                <div class="place-info">
+                    <span class="label">BAR</span>
+                    <h3>La Oficina</h3>
+                    <p class="place-description">"Bar temático con cócteles creativos. Ambiente relajado perfecto para after-office." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@roberto_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Norte</span> <br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="hoteles" data-zone="norte" data-rating="4" data-price="moderado">
+                <img src="../images/places/wyndham-quito.jpg" alt="Wyndham Quito Airport">
+                <div class="place-info">
+                    <span class="label">HOTEL</span>
+                    <h3>Wyndham Quito Airport</h3>
+                    <p class="place-description">"Perfecto para conexiones largas. Cómodo y con excelente servicio." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@miguel_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Norte</span> <br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="restaurantes" data-zone="valles" data-rating="5" data-price="premium">
+                <img src="../images/places/cire.jpg" alt="Ciré">
+                <div class="place-info">
+                    <span class="label">RESTAURANTE</span>
+                    <h3>Ciré</h3>
+                    <p class="place-description">"Cocina de fusión en Cumbayá. La terraza tiene una vista espectacular." <br> 
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@valentina_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Valles</span> <br>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="parques" data-zone="centro" data-rating="4" data-price="economico">
+                <img src="../images/places/parque-alameda.jpg" alt="Parque La Alameda">
+                <div class="place-info">
+                    <span class="label">PARQUE</span>
+                    <h3>Parque La Alameda</h3>
+                    <p class="place-description">"Parque histórico con un encanto único. No te pierdas el observatorio astronómico." <br> 
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@fernando_viajero</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐</span> <br>
+                        <span class="tag">Centro</span> <br>
+                        <span class="tag">Económico</span> 
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="bares" data-zone="norte" data-rating="4" data-price="moderado">
+                <img src="../images/places/chupitos.png" alt="Chupitos">
+                <div class="place-info">
+                    <span class="label">BAR</span>
+                    <h3>Chupitos</h3>
+                    <p class="place-description">"Bar de shots temáticos. Ideal para comenzar la noche con amigos." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@daniela_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Norte</span> <br>
+                        <span class="tag">Moderado</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="place-card" data-category="hoteles" data-zone="valles" data-rating="5" data-price="premium">
+                <img src="../images/places/mashpi-lodge.jpg" alt="Mashpi Lodge">
+                <div class="place-info">
+                    <span class="label">HOTEL</span>
+                    <h3>Mashpi Lodge</h3>
+                    <p class="place-description">"Una experiencia única en medio del bosque nublado. Lujo y naturaleza en perfecta armonía." <br>
+                        <a href="https://x.com" target="_blank"><span class="font-color-blue font-bold">@isabel_viajera</span></a>
+                    </p>
+                    <div class="place-tags">
+                        <span class="tag">⭐⭐⭐⭐⭐</span> <br>
+                        <span class="tag">Valles</span> <br>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="social-media" class="padding-80">
+        <div class="container">
+            <div class="flex align-items justify-between padding-32-rl">
+                <div>
+                    <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
+                </div>
+                <div class="flex align-items">
+                    <div>
+                        <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                    </div>
+                    <div class="sm-icons gap-8">
+                        <div>
+                            <a href="https://www.facebook.com/"  target="_blank">
+                                <img src="../images/icons/sm/facebook.png" class="animation" alt="facebook icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img src="../images/icons/sm/instagram.png" class="animation" alt="instagram icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="../images/icons/sm/x.png" class="animation" alt="twitter icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://tiktok.com/" target="_blank">
+                                <img src="../images/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="background-black-solid ">
+        <div class="bg-white">
+            <div class="container">
+                <div class="flex flex-column">
+                    <div class="flex align-items justify-between padding-32 ">
+                        <div class="flex flex-column w-half">
+                            <div class=" flex align-items justify-between margin-bottom gap-8">
+                                <a href="../../index.html">
+                                    <div class="logo width-max-30">
+                                        <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                                        <div class="logo-text flex flex-column font-size-20px max-w">
+                                            quéHay
+                                            <span class="font-bold-900 font-size-24px">Quito</span>                    
+                                        </div>                
+                                    </div>
+                                </a>
+                                <div>
+                                    <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                                </div>
+                            </div>
+                            <div>
+                                <form class="flex flex-column w-full margin-bottom">
+                                    <div class="margin-bottom block">
+                                        <input required type="email" class="border-black font-normal w-full" placeholder="queHayQuito@email.com" size="35" />
+                                    </div>
+                                    <button class="btn-red font-color-white animation">Suscríbete</button>
+                                </form>
+                                <p class="small-font-size text-center">Suscríbete a nuestra newsletter y recibe promociones. 
+                                    <br>Revisa las 
+                                    <a href="../pages/terms-policy.html" class="font-bold underline small-font-size font-color-blue" target="_blank">
+                                        Políticas de Privacidad
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-column margin-top">
+                            <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
+                            <div class="flex flex-column">
+                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
+                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
+                                <a href="../pages/terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
+                            </div>
+                            <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
+                                <div class="margin-1-rl margin-bottom margin-top uppercase ">¿Necesitas ayuda? </div>
+                                <button class="btn-whatsapp animation" >
+                                    <div class="flex align-items">
+                                        <img src="../images/icons/sm/whatsapp.png" alt="whatsapp-icon" class="display-none">
+                                        <span class="margin-1-rl">Contáctanos aquí </span>
+                                    </div>
+                                </button>
+                            </a>
+                            
+                        </div>
+                        
+                        <div class="map-container flex flex-column align-start margin-top">
+                            <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
+                            <div class="map-styles">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
+                                aria-label="Mapa Qué Hay Quito, Ecuador">
+                            </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="padding-32 font-color-white small-font-size text-center">
+            &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados.
+        </div>
+    </footer>
+    
+    <script src="../js/main.js"></script>
+    <script src="../js/filter.js"></script>
+</body>
+</html>

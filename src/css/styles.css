@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Montserrat Alternates',system-ui;
+    font-family: 'Montserrat Alternates', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
 }
 
@@ -21,6 +21,8 @@ html {
     --brand-color-black:rgb(0 0 0);
     --brand-color-blue: rgb(0 87 217);
     --brand-color-red: rgb(235, 69, 95);
+    --card-background: #FFFFFF;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @font-face {
@@ -91,7 +93,7 @@ html {
     align-items: center;
 }
 .gap-8 {
-    gap: 0.5rem;
+    gap: 0.6rem;
 }
 
 .font-color-white {
@@ -111,15 +113,15 @@ html {
 }
 
 .font-size-24px {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 .font-size-20px {
     font-size: 1.25rem;
 }
 
-.small-font-size-12px {
-    font-size: 0.8rem;
+.small-font-size {
+    font-size: 0.9rem;
 }
 
 .line-height {
@@ -134,13 +136,12 @@ html {
     max-width: 48rem;
 }
 
-.w-90 {
-    width: 90%;
-    max-width: 1500px;
-}
-
 .w-full {
     width: 100%;
+}
+
+.w-half {
+    width: 40%;
 }
 
 .width-96 {
@@ -154,10 +155,14 @@ html {
 .container {
     margin: 0 auto;
     padding: 0 20px;
-    width: 90%;
     max-width: 1400px;
     min-width: 320px;
     box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .h-full {
@@ -186,8 +191,8 @@ html {
 }
 
 .padding-80 {
-    padding-top: 5rem;
-    padding-bottom: 5rem ;
+    padding-top: 2rem;
+    padding-bottom: 2rem ;
 }
 
 .padding-16-rl {
@@ -275,14 +280,14 @@ html {
     left: 0;
 }
 
-.label {
+.label-d {
     padding: 0.25rem;
     text-align: center;
     font-size: 0.6rem;
     width: 4rem;
     font-family: 'Montserrat', system-ui;
     font-weight: 400;
-    color: white;
+    color: var(--bg-white);
     background-color: var(--brand-color-blue) ;
     border-radius: 5px 60px;
 }
@@ -459,7 +464,8 @@ button {
     border-radius: 60px;
     border: 1px solid var(--bg-color-gray);
     padding: .5rem 0.75rem;
-    transition: all 0.3s ease;
+    margin: .3rem;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -497,6 +503,13 @@ button:hover {
     box-shadow: none;
     background-color: var(--brand-color-blue);
     margin: 0;
+    transition: color 0.1s, font-size 0.1s;
+}
+
+.btn-close:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+    color: var(--brand-color-black);
 }
 
 .btn-red:hover {
@@ -544,8 +557,8 @@ h1 {
 }
 
 .img-container  img {
-    width: 0%;
-    flex-grow: 1;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     filter: brightness(50%);
 }
@@ -582,10 +595,11 @@ h1 {
     line-height: 1.3;
     padding: 20px;
 }
+
 .text-overlay img {
     filter: none;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: auto;
 }
 
 .text-overlay img:hover {
@@ -598,8 +612,6 @@ h1 {
 }
 
 .container-text, .container-places {
-    padding-right: 3rem;
-    padding-left: 3rem;
     margin-bottom: 2rem
 }
 
@@ -755,9 +767,18 @@ h2 {
     height: 428px;
 }
 
+#store {
+    background-image: url("../images/store-items/portada-marketing.jpg");
+}
+
 #social-media {
     background-color: var(--brand-color-blue);
-    height: 2rem;
+    height: auto;
+}
+
+.sm-icons {
+    display: flex;
+
 }
 
 .map-container {
@@ -781,15 +802,270 @@ h2 {
     border-radius: 4px;
 }
 
+.floating-btn {
+    position: fixed;
+    
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+#btn-whatsapp {
+    background-color: #25D366;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+#btn-back-to-top {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.5rem;
+    bottom: 1rem;
+    left: 2rem;
+    display: none;
+}
+
+#btn-back-to-top.show {
+    display: flex;
+}
+
+#btn-whatsapp::after {
+    content: "¡Escríbenos!";
+    position: absolute;
+    bottom: 70px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #25D366;
+    color: var(--bg-white);
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap;
+}
+
+#btn-whatsapp:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*-- Estilos página Top Lugares Quito */
+#main-hero-top-places {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 768px;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.text-overlay-tp {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--bg-white);
+    text-shadow: 2px 2px 4px var(--bg-black);
+}
+
+.banner-text-container h1 {
+    font-family: 'Montserrat', system-ui;
+    font-weight: 900;
+    font-size: 4rem;
+    margin: 0
+}
+
+#filter-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px var(--bg-black);
+    padding: 24px;
+    margin: 32px auto;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.filter-header h2 {
+    font-size: 1.25rem;
+    color: var(--brand-color-black);
+    font-weight: 600;
+}
+
+.discard-btn {
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 0.875rem;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-select:hover {
+    border-color: #0057D9;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #0057D9;
+    box-shadow: 0 0 0 2px rgba(0, 87, 217, 0.1);
+}
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    background-color: #f0f5ff;
+    color: #0057D9;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    cursor: default;
+}
+
+.filter-tag[data-category="bares"] {
+    background-color: #e6f7ff;
+    color: #0088cc;
+}
+
+
+.remove-tag {
+    margin-left: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.remove-tag:hover {
+    opacity: 1;
+}
+
+#top-places {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.place-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--bg-black);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.place-info {
+    padding: 20px;
+}
+
+.place-info h3 {
+    margin-bottom: 10px;
+    color: var(--brand-color-blue);
+}
+
+.label {
+    width: auto;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--brand-color-red);
+    color: var(--bg-white);
+    font-size: 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.place-description {
+    font-size: 0.9rem;
+    color: var(--brand-color-black);
+}
+
+
+/*-- Media Queries --*/
+
 @media screen and (max-width: 1400px) {
     .container-places {
         flex-wrap: wrap;
         justify-content: center;
+        width: 50vw;
     }
 
     .container-places > div {
         width: calc(50% - 1rem);
         margin-bottom: 2rem;
+        width: 100%;
     }
 
     .stories-container {
@@ -811,9 +1087,15 @@ h2 {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1260px) {
     html {
         font-size: 12px;
+    }
+
+    .container-places {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70vw;
     }
 
     .hidden {
@@ -835,8 +1117,6 @@ h2 {
         padding:2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
-
-    
 
     button a span {
         display: none;
@@ -864,7 +1144,6 @@ h2 {
 
     .nav-links ul li {
         margin: 0.5rem 0;
-
     }
 
     .nav-links div {
@@ -880,7 +1159,6 @@ h2 {
 
     nav button, a {
         width: 100%;
-        margin: .8rem;
         font-size: 12px;
     }
 
@@ -902,7 +1180,7 @@ h2 {
     }
 
     .container-places > div {
-        width: 100%;
+        max-width: 100%;
     }
 
     #newsletter .flex {
@@ -916,10 +1194,18 @@ h2 {
         gap: 1rem;
     }
 
+    .flex-row {
+        flex-direction: row;
+    }
+
     footer .flex {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .display-none{
+        display: none;
     }
 
     .map-container {
@@ -931,9 +1217,26 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #filter-section {
+        padding: 16px;
+        margin: 16px auto;
+    }
+
+    #top-places {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-text-container h1 {
+        font-size: 2rem;
+    }
+}
 
 @media screen and (max-width: 480px) {
-
     html {
         font-size: 10px;
     }
@@ -947,8 +1250,7 @@ h2 {
     }
 
     .container-text, .container-places {
-        padding-right: 1rem;
-        padding-left: 1rem;
+        width: 100%;
     }
 
     .video-container .overlay h3 {
@@ -963,3 +1265,4 @@ h2 {
         font-size: 1.2rem;
     }
 }
+
