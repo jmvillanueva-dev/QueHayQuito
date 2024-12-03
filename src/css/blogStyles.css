@@ -25,6 +25,15 @@ main {
 h1, h2 {
     margin-bottom: 1rem;
 }
+h1.titulo{
+    color: black;
+    margin-top: 50px;
+}
+.text-center{
+    justify-content: center;
+    justify-items: center;
+
+}
 
 button {
     background-color: #333;
