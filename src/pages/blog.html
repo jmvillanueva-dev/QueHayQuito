@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuéHayQuito | Información Turística</title>
+    <link rel="icon" type="image/vnd.icon" href="../images/icons/iconQQ.ico">
+    <link rel="stylesheet" href="../css/blogStyles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>   
+        <nav class="flex align-items absolute fixed w-full justify-evenly">
+            <a href="./../../index.html">
+                <div class="logo">
+                    <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                    <div class="logo-text flex flex-column">
+                        quéHay
+                        <span class="font-bold-900 font-size-24px">Quito</span>                    
+                    </div>                
+                </div>
+            </a>
+            <div class="nav-links hidden">
+                <ul>
+                    <a href="#destionations"><div>Destinos</div></a>
+                    <a href="#suggestions"><div>Sugerencias</div></a>
+                    <a href="#latest-stories"><div>Blog</div></a>
+                    <a href="#store"><div>Tienda</div></a>
+                    <a href="#footer"><div>Contáctanos</div></a>
+                </ul>
+            </div>
+            <div class="nav-acctions">
+                <div class="nav-search">
+                    <form action="">
+                        <img src="../images/icons/ic_search.png" alt="icono búsqueda" />
+                        <input type="search" id="bar-search" class="border-black"  size="25" placeholder=" Encuentra lo que buscas..." />
+                    </form>
+                    <button class="animation">Buscar</button>
+                </div>
+                <a href="./login.html">
+                    <button class="btn-primary font-color-white animation border-shadow" >
+                        Iniciar sesión
+                    </button>
+                </a>
+            </div>
+        </nav>
+        <h1>Blog de Quito</h1>
+    </header>
+    <main>
+        <section id="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="../images/blogPlaces/panecillo.webp" alt="El Panecillo">
+                    <div class="carousel-content">
+                        <h2>El Panecillo: El Mirador de Quito</h2>
+                        <p>Descubre la historia y la vista panorámica desde este icónico monumento.</p>
+                        <button class="btn-text">Leer más</button>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="../images/blogPlaces/mitaddelmundo.webp" alt="La Mitad del Mundo">
+                    <div class="carousel-content">
+                        <h2>La Mitad del Mundo: Entre Dos Hemisferios</h2>
+                        <p>Visita el monumento que marca la línea ecuatorial y aprende sobre la cultura ecuatoriana.</p>
+                        <button class="btn-text">Leer más</button>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="../images/blogPlaces/teleferico.webp" alt="Teleférico de Quito">
+                    <div class="carousel-content">
+                        <h2>Teleférico de Quito: Un Viaje a las Alturas</h2>
+                        <p>Explora Quito desde las alturas con este emocionante recorrido en teleférico.</p>
+                        <button class="btn-text">Leer más</button>
+                    </div>
+                </div>
+            </div>
+            <button id="prevBtn" class="carousel-btn prev">&#10094;</button>
+            <button id="nextBtn" class="carousel-btn next">&#10095;</button>
+        </section>
+
+        <section id="featured-posts">
+            <h2>Artículos Destacados</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <img src="../images/blogPlaces/Vista-noctura-de-Quito.webp" alt="Centro Histórico de Quito">
+                    <h3>Centro Histórico de Quito</h3>
+                    <p>Explora las calles coloniales y las iglesias barrocas del primer Patrimonio Cultural de la Humanidad.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="featured-card">
+                    <img src="../images/blogPlaces/mercadoOtavalo.jpg" alt="Mercado de Otavalo">
+                    <h3>Mercado de Otavalo</h3>
+                    <p>Sumérgete en la cultura indígena y encuentra artesanías únicas en este colorido mercado.</p>
+                    <button>Leer más</button>
+                </div>
+                <div class="featured-card">
+                    <img src="../images/blogPlaces/parqueCotopaxi.jpg" alt="Parque Nacional Cotopaxi">
+                    <h3>Parque Nacional Cotopaxi</h3>
+                    <p>Aventúrate en uno de los volcanes activos más altos del mundo y disfruta de paisajes impresionantes.</p>
+                    <button>Leer más</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-list">
+            <h2>Todos los Artículos</h2>
+            <div class="blog-item">
+                <img src="../images/blogPlaces/basilica.jpg" alt="Basílica del Voto Nacional">
+                <div class="blog-content">
+                    <h3>Basílica del Voto Nacional</h3>
+                    <p>Descubre la imponente arquitectura neogótica de esta iglesia emblemática de Quito.</p>
+                    <button>Leer más</button>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="../images/blogPlaces/ronda.jpg" alt="Calle La Ronda">
+                <div class="blog-content">
+                    <h3>Calle La Ronda</h3>
+                    <p>Pasea por esta pintoresca calle colonial llena de arte, música y gastronomía tradicional.</p>
+                    <button>Leer más</button>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="../images/blogPlaces/museo.jpg" alt="Museo de la Ciudad">
+                <div class="blog-content">
+                    <h3>Museo de la Ciudad</h3>
+                    <p>Explora la historia de Quito desde la época precolombina hasta la actualidad en este fascinante museo.</p>
+                    <button>Leer más</button>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="../images/blogPlaces/jardin.jpg" alt="Jardín Botánico de Quito">
+                <div class="blog-content">
+                    <h3>Jardín Botánico de Quito</h3>
+                    <p>Admira la diversidad de la flora ecuatoriana en este hermoso oasis en medio de la ciudad.</p>
+                    <button>Leer más</button>
+                </div>
+            </div>
+            <div class="blog-item">
+                <img src="../images/blogPlaces/capilla.jpg" alt="Capilla del Hombre">
+                <div class="blog-content">
+                    <h3>Capilla del Hombre</h3>
+                    <p>Visita este museo dedicado a la obra del famoso pintor ecuatoriano Oswaldo Guayasamín.</p>
+                    <button>Leer más</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="flex flex-column">
+            <div class="flex align-items justify-between padding-32">
+                <div class="flex flex-column">
+                    <div class=" flex align-items justify-between margin-bottom">
+                        <a href="../../index.html">
+                            <div class="logo">
+                                <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                                <div class="logo-text flex flex-column font-size-20px">
+                                    quéHay
+                                    <span class="font-bold-900 font-size-24px">Quito</span>                    
+                                </div>                
+                            </div>
+                        </a>
+                        <div>
+                            <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="flex flex-column w-full margin-bottom">
+                            <div class="margin-bottom block">
+                                <input required type="email" class="border-black font-normal" placeholder="queHayQuito@email.com" size=60 />
+                            </div>
+                            <button class="btn-red font-color-white animation">Suscríbete</button>
+                        </form>
+                        <p class="small-font-size-12px">Suscríbete a nuestra newsletter y recibe promociones. Revisa las 
+                            <a href="terms-policy.html" class="font-bold underline small-font-size-12px font-color-blue" target="_blank">
+                                Políticas de Privacidad
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-column">
+                    <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
+                    <div class="flex flex-column">
+                        <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
+                        <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
+                        <a href="terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
+                    </div>
+                    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
+                        <div class="margin-1-rl margin-bottom uppercase">¿Necesitas ayuda? </div>
+                        <button class="btn-whatsapp animation" >
+                            <div class="flex align-items">
+                                <img src="./img/icons/sm/whatsapp.png" alt="">
+                                <span class="margin-1-rl">Contáctanos aquí </span>
+                            </div>
+                        </button>
+                    </a>
+                    
+                </div>
+                
+                <div class="map-container flex flex-column align-start">
+                    <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
+                        <div class="map-styles">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
+                            aria-label="Mapa Qué Hay Quito, Ecuador">
+                        </iframe>
+                </div>
+                </div>
+            </div>
+            <div class="padding-32 background-black-solid font-color-white small-font-size-12px text-center ">
+                &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados. Ninguna parte de este sitio puede ser reproducida sin nuestro permiso.
+            </div> 
+        </div>
+    </footer>
+    <script src="../js/blog.js"></script>
+</body>
+</html>
