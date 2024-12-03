@@ -1,4 +1,4 @@
-// Blog list animation on scroll
+// Blog animación
 const blogItems = document.querySelectorAll('.blog-item');
 const observerOptions = {
     root: null,
@@ -16,20 +16,18 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
-// Check if the browser supports IntersectionObserver
 if ('IntersectionObserver' in window) {
     blogItems.forEach(item => {
         item.classList.add('animate');
         observer.observe(item);
     });
 } else {
-    // If the browser doesn't support IntersectionObserver, show all elements
     blogItems.forEach(item => {
         item.classList.add('visible');
     });
 }
 
-// Carousel functionality
+// Carousel
 const carousel = document.querySelector('.carousel-container');
 const slides = document.querySelectorAll('.carousel-slide');
 const prevBtn = document.getElementById('prevBtn');
@@ -67,8 +65,6 @@ function prevSlide() {
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
 
-// Auto-advance the carousel every 5 seconds
 setInterval(nextSlide, 5000);
 
-// Initialize the first slide as active
 showSlide(0);

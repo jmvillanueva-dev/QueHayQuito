@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 titleElement.innerHTML = '';
                 i = 0;
                 typeWriter();
-            }, 2000); // Espera 2 segundos antes de reiniciar
+            }, 2000);
         }
     }
 
@@ -40,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Efecto parallax para la imagen de fondo
+
     window.addEventListener('scroll', () => {
         const scrollPosition = window.pageYOffset;
         document.querySelector('.hero-image').style.transform = `translateY(${scrollPosition * 0.5}px)`;
     });
 
-    // Animación para las tarjetas de eventos
+
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {

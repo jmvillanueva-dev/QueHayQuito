@@ -91,13 +91,14 @@ const typed = new Typed('.typed', {
         'LEYENDAS',
         'CUENTOS', 
         'POESIAS', 
-        'REVISTAS'
+        'REVISTAS',
+		'GUÍAS VIAJE'
         ],
     // Propiedades para la ejecucion del texto
         // Velocidad de escritura in milisegundo
-        typeSpeed: 60,
+        typeSpeed: 80,
         // Tiempo de espera antes de borrar lo que se escribio
-        backDelay: 400,
+        backDelay: 600,
         // Tiempo de espera antes de empezar a escribir
         startDelay: 1000,
         // loop defide la animacion se va a repetir o no (True = Bucle) (False = 1 sola vez)

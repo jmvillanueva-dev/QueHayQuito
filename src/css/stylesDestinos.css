@@ -1,24 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
 .titleBase{
     color: #fff;
     margin-bottom: 20px;
     margin-top: 20px;
     font-size: 25px;
-    font-family: 'Montserrat', system-ui;
     font-weight: 600;
 }
+
 .titleBase1{
     color: #ffffff;
     background-color: #004AB8;
     font-size: 20px;
     margin-bottom: 10px;
     text-align: center;
-    font-family: 'Montserrat', system-ui;
     font-weight: 800;
     margin: 15px;
     width: 300px;
     height: 28px;
     border-radius: 20px;
-    box-shadow: 0px 8px #eb455fcc;
+    box-shadow: 0px 8px 3px #eb455fcc;
 }
 
 .iconoDestinos {
@@ -37,7 +44,6 @@
     border-radius: 50%;
     transition: transform 0.8s;
 }
-
 
 .iconoDestinos:hover {
     background-color:  #004AB8;
@@ -65,14 +71,6 @@
     max-width: 100%; 
 }
 
-/*.demo{
-    background-color: #f0f0f0;
-}
-
-.contenido{
-    border: Solid 1px #000;
-}
-*/
 .caja{
     flex-wrap: wrap;
     justify-content: center;
@@ -83,11 +81,8 @@
 /*Tarjeta de los emprendimientos*/
 .card{
     position: relative;
-    /*Ancho*/
     width: 250px;
-    /*Largo*/
     height: 250px;
-    /*Espacio entre las tarjetas*/
     margin: 15px;
 }
 
@@ -108,17 +103,13 @@
 
 .card .front img{
     position: absolute;
-    /*Width of the imagen*/
     width: 100%;
-    /*Heigh of the imagen*/
     height: 100%;
-    /**/
     object-fit: cover;
 }
 
 .card .front h4{
     position: absolute;
-    /* Mover el texto en el eje y (arriba (+) and abajo(-))*/
     bottom: 0px;
     width: 100%;
     height: 45px;
@@ -151,7 +142,6 @@
     margin: auto;
 }
 
-
 .card .back h4 {
     font-size: 20px;
     margin-top: 20px;
@@ -166,21 +156,6 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
-/*mprendimientos{
-    color: #fff;
-    border-radius: 0px;
-    border: solid 1px  #fff;
-    transition: .6s;
-    font-size: 12px;    
-}
-.emprendimientos:hover{
-    color: #000000;
-    border-radius: 0px;
-    border: 0px;
-    background-color: #fff; 
-}*/
-
 
 /* Ajustes responsivos */
 /* Se aplicara solo si la panatalla es menor o igual a 768px*/
