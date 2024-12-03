@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuéHayQuito | Tienda </title>
+    <link rel="icon" type="image/vnd.icon" href="../images/icons/iconQQ.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/stylesTienda.css">
+
+    <title> Tienda </title>
+</head>
+<body>
+    <header class="w-full bg-white fixed">
+        <div class="flex container align-items justify-between ">
+            <a href="../../index.html">
+                <div class="logo">
+                    <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                    <div class="logo-text flex flex-column">
+                        quéHay
+                        <span class="font-bold-900 font-size-24px">Quito</span>                    
+                    </div>                
+                </div>
+            </a>
+            
+            <nav id="nav">
+                <div class="nav-bar flex align-items">
+                    <div class="nav-links">
+                        <button id="btn-close" class="btn-close font-bold font-color-white hidden">X</button>
+                        <ul>
+                            <a href="./destinos.html"><div>Destinos</div></a>
+                            <a href="#suggestions"><div>Sugerencias</div></a>
+                            <a href="./blog.html"><div>Blog</div></a>
+                            <a href="#sitioPrincipal"><div>Tienda</div></a>
+                            <a href="#footer"><div>Contáctanos</div></a>
+                        </ul>
+                    </div>
+                    <div class="nav-search">
+                        <form action="">
+                            <img src="../images/icons/ic_search.png " alt="icono búsqueda" />
+                            <input type="search" id="bar-search" class="border-black" size="25"  placeholder=" Encuentra lo que buscas..." />
+                        </form>
+                        <button class="animation">Buscar</button>
+                    </div>
+                    <div class="nav-car">
+                        <form action="">
+                            <button class="submenu">
+                                <img id="imagen-carrito" src="../images/store-items/material-symbols--shopping-cart.png" alt="car">
+                                <div id="carrito">
+                                    <table id="lista-carrito">
+                                        <thead>
+                                            <tr>
+                                                <th>IMAGEN</th>
+                                                <th>NOMBRE</th>
+                                                <th>PRECIO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <a href="#" id="vaciar-carrito" class="btn-3"> vaciar carrito</a>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+            </nav>
+            <button id="btn-open" class="menu-toggle hidden" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+        </button>
+            <button class="btn-primary font-color-white animation border-shadow" >
+                <a href="./src/pages/login.html">
+                    <div class="flex align-items gap-8 font-color-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16"><path fill="white" d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3"/><path fill="white" fill-rule="evenodd" d="M16 8c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8M4 13.75C4.16 13.484 5.71 11 7.99 11c2.27 0 3.83 2.49 3.99 2.75A6.98 6.98 0 0 0 14.99 8c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 2.38 1.19 4.49 3.01 5.75" clip-rule="evenodd"/></svg>
+                        <span >Iniciar sesión</span>
+                    </div>
+                </a>
+            </button>
+        </div>
+        
+    </header>
+
+    <section id="sitioPrincipal" class="padding-top opciones"> 
+        <div class="container"> 
+            <div class="flex flex-column align-items banner">
+                <header class="header">
+                    <div class="header-content container">
+                        <div class="header-txt">
+                            <div class="shadow">
+                                <h6 class="font-bold-900  bienvenidos">BIENVENIDOS A NUESTRA TIENDA</h6>
+                            </div>
+
+                            <div>
+                                <h2 class="font-bold-900 font-size-24px" id="typed"> <spam class="typed"></spam> </h2>
+                            </div>
+                            <p>
+                                " Un mundo de conocimiento al alcance de un clic "
+                            </p>
+                            <div class="butons">
+                                <a href="#" class="font-bold-900  btn-1"> Informacion </a>
+                                <a href="#" class="font-bold-900  btn-1"> leer mas </a>
+                            </div>
+                        </div>
+                        <div class="header-img">
+                            <img class="imgInicio" src="../images/places/museo-cera.png" alt="fondo imagen">
+                        </div>
+                    </div>
+
+                </header>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-top opciones">  <!-- No tocar -->
+        <div class="container"> <!-- No tocar -->
+            <!-- colocar nuevo código dentro del div.class="container" -->
+            <div class="flex flex-column align-items banner">
+                <section class="oferts container">
+
+                    <div class="ofert-1 b1">
+                        <div class="ofert-txt">
+                            <h3>"Libros universitarios al mejor precio, entre estudiantes."</h3>
+                            <a href="#" >leer mas</a>
+                        </div>
+                        <div class="ofert-img">
+                            <img src="../images/store-items/twemoji--books.png">
+                        </div>
+                    </div>
+            
+                    <div class="ofert-1 b2">
+                        <div class="ofert-txt">
+                            <h3>"Conecta, compra y aprende en tu comunidad universitaria"</h3>
+                            <a href="#" >leer mas</a>
+                        </div>
+                        <div class="ofert-img">
+                            <img src="../images/store-items/emojione-v1--books.png">
+                        </div>
+                    </div>
+            
+                    <div class="ofert-1 b3">
+                        <div class="ofert-txt">
+                            <h3>"Libros universitarios al mejor precio, entre estudiantes."</h3>
+                            <a href="#" >leer mas</a>
+                        </div>
+                        <div class="ofert-img">
+                            <img src="../images/store-items/emojione--books.png">
+                        </div>
+                    </div>
+            
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-top opciones">  <!-- No tocar -->
+        <div class="container"> <!-- No tocar -->
+            <!-- colocar nuevo código dentro del div.class="container" -->
+            <div class="flex flex-column    ">
+                <main class="products conatiner">
+
+                    <h2 class="containerblue"> LIBROS </h2>
+            
+                    <div class="box-container" id="lista-1">
+            
+                        <div class="box">
+                            <img src="../images/libros/10 A LA COSTA.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> A LA COSTA </h3>
+                                <p> 
+                                    Narra el viaje de diez personajes ecuatorianos hacia la costa, 
+                                    cuyas vidas se entrelazan mientras enfrentan desafíos sociales y personales en busca de un futuro mejor.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$20</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="1">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="box">
+                            <img src="../images/libros/30 LA EMANCIPADA.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> LA EMANCIPADA </h3>
+                                <p>
+                                    Cuenta la historia de Rosaura, una joven sometida por su familia que busca liberarse de las ataduras sociales 
+                                    y emocionales. 
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$22</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="2">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="box">
+                            <img src="../images/libros/34 LA VORAGINE.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> LA VORAGINE </h3>
+                                <p>  
+                                    Sigue a Arturo y Alicia en su lucha por sobrevivir en la selva amazónica,
+                                    donde la naturaleza se convierte en un reflejo de la tragedia humana.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$15</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="3">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="box">
+                            <img src="../images/libros/35 Don Segundo portada outlines.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> DON SEGUNDO PORTADA</h3> 
+                                <p> Narra la vida de Fabio Cáceres, un joven huérfano que, guiado por el gaucho Don Segundo,
+                                    descubre la vida en las pampas argentinas. A medida que crece, Fabio adopta los valores de la tradición gaucha.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$25</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="4">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/5 MODERNISMO EN EL ECUADOR.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> MODERNISMO EN EL ECUADOR </h3> 
+                                <p> 
+                                    Narra la vida de Fabio Cáceres, un joven huérfano que, guiado por el gaucho Don Segundo,
+                                    descubre la vida en las pampas argentinas. A medida que crece, Fabio adopta los valores de la tradición gaucha.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$25</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="5">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/AL FARO.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> AL FARO </h3> 
+                                <p> 
+                                    De Virginia Woolf explora las relaciones familiares y el paso del tiempo a través de la mirada de la familia Ramsay 
+                                    durante sus vacaciones en una isla.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$15</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="6">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/CASA DE MUNECAS.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> CASA DE MUÑECAS </h3> 
+                                <p> 
+                                    De Henrik Ibsen sigue a Nora, una mujer que, tras años de obediencia en un matrimonio aparentemente perfecto, descubre su necesidad de independencia.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$12.80</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="7">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/CONJUROS.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> CONJURO </h3> 
+                                <p> 
+                                    Narra una historia cargada de misterio y magia, donde fuerzas sobrenaturales se desatan, desafiando los límites entre la realidad y lo oculto. 
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$25.80</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="8">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/CUMANDA.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> CUMANDA </h3> 
+                                <p> 
+                                    Es una novela de Juan León Mera que cuenta la historia de un amor imposible entre un joven blanco, Juan, y una indígena, Cumandá, en el contexto de la época colonial en Ecuador.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$35</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="9">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/EL CAPULI.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> EL CAPULI </h3> 
+                                <p> 
+                                Es una novela que narra la vida de un joven que crece en un pequeño pueblo andino,
+                                    donde la naturaleza y las tradiciones juegan un papel crucial en su desarrollo.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$19</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="10">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/EL MAGO DE OZ.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> EL MAGO DE OZ </h3> 
+                                <p> 
+                                    Sigue a Dorothy y sus amigos en un viaje para encontrar al Mago de Oz y regresar a casa,
+                                    aprendiendo lecciones sobre coraje, amistad y el valor del hogar.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$13</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="11">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/EL SIGLO DE ORO ESPAÑOL.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> ORO ESPAÑOL </h3> 
+                                <p> 
+                                    Es una novela histórica que narra las aventuras de un grupo de personajes que buscan el oro perdido de los conquistadores españoles en América. 
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$21</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="12">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/ELEMENTOS DISPARES.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> ELEMENTOS DISPARES </h3> 
+                                <p> 
+                                    Es una novela que explora la vida de personajes con realidades y perspectivas muy diferentes,
+                                    cuyos destinos se entrelazan de manera inesperada.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$25.50</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="13">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/POESIA AMOROSA.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> POESIA AMOROSA </h3> 
+                                <p> 
+                                    Es una recopilación de versos que expresan los diversos matices del amor, desde la pasión hasta la melancolía.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$36.99</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="14">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="../images/libros/SUEÑO Y LLUVIA.jpg" alt="producto">
+                            <div class="product-txt">
+                                <h3> SUEÑO Y LLUVIA </h3> 
+                                <p> 
+                                    Es una obra que fusiona la realidad con lo onírico,
+                                    explorando las emociones y reflexiones de los personajes a través de un entorno de lluvia constante.
+                                </p>
+                                <h3> PRECIO </h3>
+                                <p class="precio">$25</p>
+                                <a href="#" class="agregar-carrito btn-3" data-id="15">
+                                    Agregar Carrito
+                                </a>
+                            </div>
+                        </div>
+                        
+            
+                    </div>
+            
+                    <div class="btn-3" id="load-more">Cargar Mas</div>
+            
+                </main>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-top opciones">  
+        <div class="container"> 
+            <div class="flex flex-column align-items banner">
+                <section class="testimonial container">
+                    <span> COMENTARIOS </span>
+                    <h2 class="containerblue"> QUE OPINAN NUESTROS CLIENTES</h2>
+                    <div class="testimonial-content">
+                        <div class="testimonial-1">
+                            <p>
+                                "¡Increíble app! La interfaz es súper intuitiva y fácil de usar. Encontré todos los libros que buscaba a precios excelentes. Además, el envío fue muy rápido. ¡La recomiendo al 100%!"
+                            </p>
+                            <img src="../images/store-items/estrella.png" alt="estrellas">
+                            <h4> Ana Pérez  </h4>
+                        </div>
+            
+                        <div class="testimonial-1">
+                            <p>
+                                "He comprado varios libros y siempre han llegado en perfecto estado y a tiempo.
+                                Me gusta que también tienen opciones digitales, así puedo leer desde cualquier lugar. 
+                            </p>
+                            <img src="../images/store-items/estrella.png" alt="estrellas">
+                            <h4> Erick Nuñez </h4>
+                        </div>
+            
+                        <div class="testimonial-1">
+                            <p>
+                                "Me encanta la variedad de libros que tienen, desde bestsellers hasta clásicos difíciles de encontrar. Además, las reseñas de otros usuarios me ayudaron mucho a elegir."
+                            </p>
+                            <img src="../images/store-items/estrella.png" alt="estrellas">
+                            <h4> Salome Salazar </h4>
+                        </div>
+            
+                    </div>
+            
+                </section>
+            </div>
+        </div>
+    </section>
+    
+
+<!--Footer of the page -->
+    <section id="social-media" class="padding-80">
+        <div class="container">
+            <div class="flex align-items justify-between padding-32-rl">
+                <div>
+                    <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
+                </div>
+                <div class="flex align-items">
+                    <div>
+                        <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                    </div>
+                    <div class="sm-icons gap-8">
+                        <div>
+                            <a href="https://www.facebook.com/"  target="_blank">
+                                <img src="../images/icons/sm/facebook.png" class="animation" alt="facebook icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img src="../images/icons/sm/instagram.png" class="animation" alt="instagram icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="../images/icons/sm/x.png" class="animation" alt="twitter icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://tiktok.com/" target="_blank">
+                                <img src="../images/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="background-black-solid ">
+        <div class="bg-white">
+            <div class="container">
+                <div class="flex flex-column">
+                    <div class="flex align-items justify-between padding-32 ">
+                        <div class="flex flex-column w-half">
+                            <div class=" flex align-items justify-between margin-bottom gap-8">
+                                <a href="../../index.html">
+                                    <div class="logo width-max-30">
+                                        <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                                        <div class="logo-text flex flex-column font-size-20px max-w">
+                                            quéHay
+                                            <span class="font-bold-900 font-size-24px">Quito</span>                    
+                                        </div>                
+                                    </div>
+                                </a>
+                                <div>
+                                    <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                                </div>
+                            </div>
+                            <div>
+                                <form class="flex flex-column w-full margin-bottom">
+                                    <div class="margin-bottom block">
+                                        <input required type="email" class="border-black font-normal w-full" placeholder="queHayQuito@email.com" size="35" />
+                                    </div>
+                                    <button class="btn-red font-color-white animation">Suscríbete</button>
+                                </form>
+                                <p class="small-font-size text-center">Suscríbete a nuestra newsletter y recibe promociones. 
+                                    <br>Revisa las 
+                                    <a href="../pages/terms-policy.html" class="font-bold underline small-font-size font-color-blue" target="_blank">
+                                        Políticas de Privacidad
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-column margin-top">
+                            <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
+                            <div class="flex flex-column">
+                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
+                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
+                                <a href="../pages/terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
+                            </div>
+                            <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
+                                <div class="margin-1-rl margin-bottom margin-top uppercase ">¿Necesitas ayuda? </div>
+                                <button class="btn-whatsapp animation" >
+                                    <div class="flex align-items">
+                                        <img src="../images/icons/sm/whatsapp.png" alt="whatsapp-icon" class="display-none">
+                                        <span class="margin-1-rl">Contáctanos aquí </span>
+                                    </div>
+                                </button>
+                            </a>
+                            
+                        </div>
+                        
+                        <div class="map-container flex flex-column align-start margin-top">
+                            <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
+                            <div class="map-styles">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
+                                aria-label="Mapa Qué Hay Quito, Ecuador">
+                            </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="padding-32 font-color-white small-font-size text-center">
+            &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank" id="btn-whatsapp" class="floating-btn">
+        <img src="../images/icons/sm/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- Botón de regresar al inicio -->
+    <button id="btn-back-to-top" class="floating-btn hidden">
+        ↑
+    </button>
+
+    <!-- Archivos script .js -->
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../js/tienda.js"></script>
+</body>
+</html>

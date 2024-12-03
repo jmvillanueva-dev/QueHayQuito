@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuéHayQuito | Destinos </title>
+    <link rel="icon" type="image/vnd.icon" href="../images/icons/iconQQ.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/stylesDestinos.css">
+    <title>Destinos</title>
+</head>
+<body>
+    <header class="w-full bg-white fixed">
+        <div class="flex container align-items justify-between ">
+            <a href="../../index.html">
+                <div class="logo">
+                    <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                    <div class="logo-text flex flex-column">
+                        quéHay
+                        <span class="font-bold-900 font-size-24px">Quito</span>                    
+                    </div>                
+                </div>
+            </a>
+            
+            <nav id="nav">
+                <div class="nav-bar flex align-items">
+                    <div class="nav-links">
+                        <button id="btn-close" class="btn-close font-bold font-color-white hidden">X</button>
+                        <ul>
+                            <a href="#destinos"><div>Destinos</div></a>
+                            <a href="#suggestions"><div>Sugerencias</div></a>
+                            <a href="./blog.html"><div>Blog</div></a>
+                            <a href="./tienda.html"><div>Tienda</div></a>
+                            <a href="#footer"><div>Contáctanos</div></a>
+                        </ul>
+                    </div>
+                    <div class="nav-search">
+                        <form action="">
+                            <img src="../images/icons/ic_search.png" alt="icono búsqueda" />
+                            <input type="search" id="bar-search" class="border-black" size="25"  placeholder=" Encuentra lo que buscas..." />
+                        </form>
+                        <button class="animation">Buscar</button>
+                    </div>
+                    
+                </div>
+                
+            </nav>
+            <button id="btn-open" class="menu-toggle hidden" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <button class="btn-primary font-color-white animation border-shadow" >
+                <a href="../pages/login.html">
+                    <div class="flex align-items gap-8 font-color-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16"><path fill="white" d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3"/><path fill="white" fill-rule="evenodd" d="M16 8c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8M4 13.75C4.16 13.484 5.71 11 7.99 11c2.27 0 3.83 2.49 3.99 2.75A6.98 6.98 0 0 0 14.99 8c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 2.38 1.19 4.49 3.01 5.75" clip-rule="evenodd"/></svg>
+                        <span >Iniciar sesión</span>
+                    </div>
+                </a>
+            </button>
+        </div>   
+    </header>
+<!-- menu destinos -->
+    <main class="container">
+        <section class="padding-top opciones" id="destinos">  <!-- No tocar -->
+            <div class="container "> <!-- No tocar -->
+                <!-- colocar nuevo código dentro del div.class="container" -->
+                <div class="flex flex-column align-items banner">
+                    <h4  class="titleBase"> ¿ Qué quieres hacer hoy ?  </h4>
+                    <div>
+                        <a href="#cervezas">
+                            <button class="iconoDestinos">
+                                <img  src="../images/destinos-items/streamline--beer-pitch-solid.png" alt="Imagen cerveza"></img>
+                            </button>
+                        </a>
+                        <a href="#museos">
+                            <button class="iconoDestinos">
+                                <img src="../images/destinos-items/map--museum.png" alt="Imagen museo"></img>
+                            </button>
+                        </a>
+                        <a href="#parques">
+                            <button class="iconoDestinos">
+                                <img src="../images/destinos-items/map--amusement-park.png" alt="Imagen parque de juegos"></img>
+                            </button>
+                        </a>
+                        <a href="#discotecas">
+                            <button class="iconoDestinos">
+                                <img src="../images/destinos-items/bailando.png" alt="Imagen baile"></img>
+                            </button>
+                        </a>
+                        <a href="#comidas">
+                            <button class="iconoDestinos">
+                                <img src="../images/destinos-items/fluent--food-16-filled.png" alt="Imagen comida"></img>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Bares -->
+        <section id="cervezas"  class="padding-top opciones">  <!-- No tocar -->
+            <div class="container"> <!-- No tocar -->
+                <div class="text">
+                    <h4 class="titleBase1"> ¿ TOMAR ?</h4>
+                </div>
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button id="leftBares" class="carousel__anterior">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-left.png">
+                        </button>
+        
+                        <div class="carousel__lista bares">
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Bares_QQ/Andes Brew Pub/ABP_Inicio.jpg" alt="Bar Andres Brew Pub">
+                                    <p> ANDRES BREW PUB </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Bares_QQ/Dilema Bar Restaurante/DLM_Inicio.jpg" alt="Bar Dilema">
+                                    <p> DILEMA </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Bares_QQ/Santos Brewery/SB_Inicio.jpg" alt="Bar Santos Brewery">
+                                    <p> SANTOS BREWERY </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <button id="rightBares" class="carousel__siguiente">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-right.png">
+                        </button>
+                    </div>
+            
+                    <div role="tablist" class="carousel__indicadores"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Museos -->
+        <section id="museos"  class="padding-top opciones">  <!-- No tocar -->
+            <div class="container"> <!-- No tocar -->
+                <div class="text">
+                    <h4 class="titleBase1"> ¿ APRENDER ? </h4>
+                </div>
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button id="leftMuseo" class="carousel__anterior">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-left.png">
+                        </button>
+        
+                        <div class="carousel__lista museo">
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Museos_QQ/La Casa del Alabado/CDA_Inicio.jpg" alt="Museo Casa del Alabado">
+                                    <p> CASA DEL ALABADO </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Museos_QQ/Museo Alberto Mena Caamano/AMC_ImgenTwo.jpg" alt="Museo Alberto Mena Caamano">
+                                    <p> ALBERTO MENA CAAMANO </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Museos_QQ/Templo de la Patria/TDLP_Inicio.jpg" alt="Museo Templo de la Patria">
+                                    <p> TEMPLO DE LA PATRIA </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <button id="rightMuseo" class="carousel__siguiente">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-right.png">
+                        </button>
+                    </div>
+            
+                    <div id="indicadoresMuseo" role="tablist" class="carousel__indicadores"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Parques -->
+        <section id="parques"  class="padding-top opciones">  <!-- No tocar -->
+            <div class="container"> <!-- No tocar -->
+                <div class="text">
+                    <h4 class="titleBase1"> ¿ JUGAR ? </h4>
+                </div>
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button id="leftParque" class="carousel__anterior">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-left.png">
+                        </button>
+        
+                        <div class="carousel__lista parque">
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Parques_QQ/El jardin Alado/EJA_Inicio.jpg" alt="Parque El jardin Alado">
+                                    <p> EL JARDIN ALADO </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Parques_QQ/La Carolina/CLN_ImagenThree.jpg" alt="Parque La Carolina">
+                                    <p> LA CAROLINA </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Parques_QQ/Parque Metropolitano/PMPT_Inicio.jpg" alt="Parque Metropolitano">
+                                    <p> PARQUE METROPOLITANO </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <button id="rightParque" class="carousel__siguiente">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-right.png">
+                        </button>
+                    </div>
+            
+                    <div id="indicadoresParque" role="tablist" class="carousel__indicadores"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Discotecas -->
+        <section id="discotecas"  class="padding-top opciones">  <!-- No tocar -->
+            <div class="container"> <!-- No tocar -->
+                <div class="text">
+                    <h4 class="titleBase1"> ¿ BAILAR ? </h4>
+                </div>
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button id="leftDiscoteca" class="carousel__anterior">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-left.png">
+                        </button>
+        
+                        <div class="carousel__lista discoteca">
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Discotecas_QQ/Bungalow 6/BGW_Inicio.jpg" alt="Discoteca Bungalow 6">
+                                    <p> BUNGALOW 6 </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Discotecas_QQ/Jungle/JNGLE_Inicio.jpg" alt="Discoteca Jungle">
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Discotecas_QQ/Lavoe/LVE_Inicio.jpg" alt="Discoteca Lavoe">
+                                    <p> LAVOE </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <button id="rightDiscoteca" class="carousel__siguiente">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-right.png">
+                        </button>
+                    </div>
+            
+                    <div id="indicadoresDiscoteca" role="tablist" class="carousel__indicadores"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Restaurantes -->
+        <section id="comidas"  class="padding-top opciones">  <!-- No tocar -->
+            <div class="container"> <!-- No tocar -->
+                <div class="text">
+                    <h4 class="titleBase1"> ¿ COMER ? </h4>
+                </div>
+                <div class="carousel">
+                    <div class="carousel__contenedor">
+                        <button id="leftRestaurante" class="carousel__anterior">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-left.png">
+                        </button>
+        
+                        <div class="carousel__lista restaurante">
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Restaurantes_QQ/Cafeteria Plaza Grande/PLG_Inicio.jpg" alt="Cafeteria Plaza Grande">
+                                    <p> CAFETERIA PLAZA GRANDE </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Restaurantes_QQ/Macchiata Brunch Pizza Pasta/MBPP_Inicio.jpg" alt="Restaurante Macchiata Brunch">
+                                    <p> MACCHIATA BRUNCH PIZZA PASTA  </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel__elemento">
+                                <div class="card">
+                                    <img src="../images/emprendimientos/Restaurantes_QQ/Republica del Cacao/RDC_Inicio.jpg" alt="Restaurante Republica del Cacao">
+                                    <p> REPUBLICA DEL CACAO </p>
+                                </div>
+                                <div class="link">
+                                    <a href="#">
+                                        <button class="btn_emprendimiento">
+                                            VER MAS 
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <button id="rightRestaurante" class="carousel__siguiente">
+                            <img src="../images/emprendimientos/arrows/lucide--circle-arrow-right.png">
+                        </button>
+                    </div>
+            
+                    <div id="indicadoresRestaurante" role="tablist" class="carousel__indicadores"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Redes Sociales -->
+    <section id="social-media" class="padding-80">
+        <div class="container">
+            <div class="flex align-items justify-between padding-32-rl">
+                <div>
+                    <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
+                </div>
+                <div class="flex align-items">
+                    <div>
+                        <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                    </div>
+                    <div class="sm-icons gap-8">
+                        <div>
+                            <a href="https://www.facebook.com/"  target="_blank">
+                                <img src="../images/icons/sm/facebook.png" class="animation" alt="facebook icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img src="../images/icons/sm/instagram.png" class="animation" alt="instagram icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="../images/icons/sm/x.png" class="animation" alt="twitter icon">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://tiktok.com/" target="_blank">
+                                <img src="../images/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--Footer of the page -->
+    <footer id="footer" class="background-black-solid ">
+        <div class="bg-white">
+            <div class="container">
+                <div class="flex flex-column">
+                    <div class="flex align-items justify-between padding-32 ">
+                        <div class="flex flex-column w-half">
+                            <div class=" flex align-items justify-between margin-bottom gap-8">
+                                <a href="../../index.html">
+                                    <div class="logo width-max-30">
+                                        <img src="../images/icons/logoQQ.png" alt="logo empresa">
+                                        <div class="logo-text flex flex-column font-size-20px max-w">
+                                            quéHay
+                                            <span class="font-bold-900 font-size-24px">Quito</span>                    
+                                        </div>                
+                                    </div>
+                                </a>
+                                <div>
+                                    <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
+                                </div>
+                            </div>
+                            <div>
+                                <form class="flex flex-column w-full margin-bottom">
+                                    <div class="margin-bottom block">
+                                        <input required type="email" class="border-black font-normal w-full" placeholder="queHayQuito@email.com" size="35" />
+                                    </div>
+                                    <button class="btn-red font-color-white animation">Suscríbete</button>
+                                </form>
+                                <p class="small-font-size text-center">Suscríbete a nuestra newsletter y recibe promociones. 
+                                    <br>Revisa las 
+                                    <a href="../pages/terms-policy.html" class="font-bold underline small-font-size font-color-blue" target="_blank">
+                                        Políticas de Privacidad
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-column margin-top">
+                            <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
+                            <div class="flex flex-column">
+                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
+                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
+                                <a href="../pages/terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
+                            </div>
+                            <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
+                                <div class="margin-1-rl margin-bottom margin-top uppercase ">¿Necesitas ayuda? </div>
+                                <button class="btn-whatsapp animation" >
+                                    <div class="flex align-items">
+                                        <img src="../images/icons/sm/whatsapp.png" alt="whatsapp-icon" class="display-none">
+                                        <span class="margin-1-rl">Contáctanos aquí </span>
+                                    </div>
+                                </button>
+                            </a>
+                            
+                        </div>
+                        
+                        <div class="map-container flex flex-column align-start margin-top">
+                            <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
+                            <div class="map-styles">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
+                                aria-label="Mapa Qué Hay Quito, Ecuador">
+                            </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="padding-32 font-color-white small-font-size text-center">
+            &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank" id="btn-whatsapp" class="floating-btn">
+        <img src="../images/icons/sm/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- Botón de regresar al inicio -->
+    <button id="btn-back-to-top" class="floating-btn hidden">
+        ↑
+    </button>
+
+    <!-- Archivos script .js -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<script src="../js/slider.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
