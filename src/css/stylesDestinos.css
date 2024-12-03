@@ -167,16 +167,7 @@
     margin-bottom: 0px;
 }
 
-.card:hover .front{
-    transform: perspective(600px) rotateY(180deg);
-}
-
-.card:hover .back{
-    transform: perspective(600px) rotateY(360deg);
-}  
-
-
-.emprendimientos{
+/*mprendimientos{
     color: #fff;
     border-radius: 0px;
     border: solid 1px  #fff;
@@ -187,8 +178,9 @@
     color: #000000;
     border-radius: 0px;
     border: 0px;
-    background-color: #fff;
-}
+    background-color: #fff; 
+}*/
+
 
 /* Ajustes responsivos */
 /* Se aplicara solo si la panatalla es menor o igual a 768px*/
