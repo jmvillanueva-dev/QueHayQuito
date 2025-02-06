@@ -4,410 +4,595 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuéHayQuito</title>
-    <link rel="icon" type="image/vnd.icon" href="./src/images/icons/iconQQ.ico">
-    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="icon" type="image/vnd.icon" href="./src/images/icons/logo/icon.svg">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/styles.module.css">
+    <script type="module" src="./src/js/navBar.js"></script>
 </head>
-<body>
-    <header class="w-full bg-white fixed">
-        <div class="flex container align-items justify-between ">
-            <a href="./index.html">
-                <div class="logo">
-                    <img src="./src/images/icons/logoQQ.png" alt="logo empresa">
-                    <div class="logo-text flex flex-column">
-                        quéHay
-                        <span class="font-bold-900 font-size-24px">Quito</span>                    
-                    </div>                
-                </div>
+<body>    
+<div class="relavite">
+    <!-- Header & Navegation bar -->
+    <header class="w-full bg-white">
+        <div class="mx-auto flex gap-2 h-16 max-w-7xl items-center justify-between px-4">
+            <!-- Logo Section -->
+            <a href="/" class="flex items-center gap-2">
+                <img
+                src="./src/images/icons/logo/logoQQ.svg"
+                alt="quéHay Quito logo"
+                class="h-10 w-auto"
+                />  
             </a>
-            
-            <nav id="nav">
-                <div class="nav-bar flex align-items">
-                    <div class="nav-links">
-                        <button id="btn-close" class="btn-close font-bold font-color-white hidden">X</button>
-                        <ul>
-                            <a href="#destionations"><div>Destinos</div></a>
-                            <a href="#suggestions"><div>Sugerencias</div></a>
-                            <a href="#latest-stories"><div>Blog</div></a>
-                            <a href="#store"><div>Tienda</div></a>
-                            <a href="#footer"><div>Contáctanos</div></a>
-                        </ul>
+        
+            <!-- Navigation Links -->
+            <nav class="hidden lg:block">
+                <ul id="navList" class="flex items-center">
+                    <!-- Allways link to navbar.js on your <head> element for add options -->
+                </ul>
+            </nav>
+        
+            <!-- Search and Login Section -->
+            <div class="flex items-center gap-4">
+                <div class="hidden items-center gap-2 lg:flex">
+                    <div class="relative">
+                        <!-- Search Icon -->
+                        <svg 
+                            class="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 24 24" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            stroke-width="2" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input
+                            type="search"
+                            placeholder="¿Qué estás buscando?"
+                            class=" text-sm rounded-full border border-gray-300 px-8 py-2 focus:border-bluebrand focus:outline-none focus:ring-1 focus:ring-[#0066FF]"
+                        />
                     </div>
-                    <div class="nav-search">
-                        <form action="">
-                            <img src="./src/images/icons/ic_search.png" alt="icono búsqueda" />
-                            <input type="search" id="bar-search" class="border-black" size="25"  placeholder=" Encuentra lo que buscas..." />
-                        </form>
-                        <button class="animation">Buscar</button>
-                    </div>
-                    
+                    <button class="rounded-full bg-bluebrand px-4 py-2 text-sm font-medium text-white transition-transform duration-300 ease-in-out hover:bg-[#0052CC] hover:transform hover:-translate-y-2">
+                        Buscar
+                    </button>
                 </div>
                 
-            </nav>
-            <button id="btn-open" class="menu-toggle hidden" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <button class="btn-primary font-color-white animation border-shadow" >
-                <a href="./src/pages/login.html">
-                    <div class="flex align-items gap-8 font-color-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16"><path fill="white" d="M11 7c0 1.66-1.34 3-3 3S5 8.66 5 7s1.34-3 3-3s3 1.34 3 3"/><path fill="white" fill-rule="evenodd" d="M16 8c0 4.42-3.58 8-8 8s-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8M4 13.75C4.16 13.484 5.71 11 7.99 11c2.27 0 3.83 2.49 3.99 2.75A6.98 6.98 0 0 0 14.99 8c0-3.87-3.13-7-7-7s-7 3.13-7 7c0 2.38 1.19 4.49 3.01 5.75" clip-rule="evenodd"/></svg>
-                        <span >Iniciar sesión</span>
-                    </div>
+                <a class="hidden items-center gap-2 rounded-full bg-bluebrand px-4 py-2 text-sm font-medium text-white transition-transform duration-300 ease-in-out hover:bg-[#0052CC] hover:transform hover:-translate-y-2 lg:flex">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Iniciar sesión
                 </a>
-            </button>
-        </div>   
+
+                <button class="rounded p-2 hover:bg-gray-100 lg:hidden">
+                    <svg
+                        class="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
+    <!-- End Header -->
 
     <main>
-        <section id="main-hero" class="padding-top">
-                <div class="img-container">
-                    <div class="img-full">
-                        <img src="./src/images/places/centro-historico.png" alt="centro historico Quito">
-                        <div class="text-overlay">
-                            <span>Arquitectura e historia: Las 5 iglesias más impresionantes de Quito</span>
-                            <a href="">
-                                <img src="./src/images/icons/ic_next.png" alt="icon next">
-                            </a>
-                        </div>
+        <!-- Hero section -->
+        <section id="main-hero" class="relative">
+            <div class="absolute left-0 right-0 z-10 max-w-full mx-auto top-32 lg:top-64 w-content">
+                <div class="flex justify-center w-4/5 m-auto lg:w-content lg:max-w-4xl">
+                    <div class="max-w-4xl leading-none text-center text-white touch-action-none">
+                        <h1 class="text-3xl font-poppins font-display md:text-8xl leading-tighter font-semibold max-w-4xl leading-none text-center text-white touch-action-none">Descubre
+                        <span class="whitespace-nowrap">lugares</span> mágicos en Quito</h1>
                     </div>
-    
-                    <div class="img-full">
-                        <img src="./src/images/places/iglesia-compania.png" alt="iglesia la compania">
-                        <div class="text-overlay">
-                            <span>Un ícono del barroco en América Latina: la majestuosa Iglesia de la Compañía de Jesús</span>
-                            <a href="">
-                                <img src="./src/images/icons/ic_next.png" alt="icon next">
-                            </a>
-                        </div>
-                    </div>
-    
-                    <div class="img-full">
-                        <img src="./src/images/places/virgen-panecillo-quito.png" alt="virgen panecillo quito">
-                        <div class="text-overlay">
-                            <span>El Panecillo: Un cerro Emblemático con las Mejores Vistas de la Ciudad</span>
-                            <a href="">
-                                <img src="./src/images/icons/ic_next.png" alt="icon next">
-                            </a>
-                        </div>
-                    </div>                
                 </div>
-                <div class="banner-text-container">
-                    <h1>Descubre lugares dignos de visitar</h1>
-                </div>           
-        </section>
-
-        <section id="destionations">
-            <div class="container">
-                <div class="container-text flex flex-column">
-                    <div class="uppercase">
-                        Planifica tu viaje
-                    </div>
-                    <div class="flex justify-between">
-                        <h2>¿Cuál es tu próximo destino?</h2>
-                        <a href="./src/pages/destinos.html">
-                            <button class="animation">
-                                Ver todos los lugares
-                            </button>
-                        </a>
+            </div>
+            
+            <div class="flex overflow-x-auto scroll-snap-x-mandatory">
+                <div data-index="0" class="jsx-c41fdbc9c6b06959 relative flex-none w-screen snap-align-start lg:flex-1 min-h-screen-4/5 lg:min-h-184">
+                    <div class="h-full">
+                        <div class="h-full relative">
+                            <img alt=""  class="absolute w-full h-full object-cover top-0 left-0 bg-black-200" sizes="100vw" src="./src/images/places/centro-historico.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <div class="w-full h-full relative flex items-end styles_panel">
+                                <a href="/" role="button" tabindex="0" class="jsx-c41fdbc9c6b06959 flex items-end justify-between w-full mx-4 mb-6 text-lg leading-tight text-white group lg:mx-6 lg:mb-8 font-display lg:text-2xl card-link">
+                                    <span class="w-10/12 md:w-2/3">
+                                        Arquitectura e historia: Las 5 iglesias más impresionantes de Quito.
+                                    </span>
+                                    <img src="./src/images/icons/arrow-next.svg" alt="next icon" class="transition-transform duration-300 ease-in-out group-hover:transform group-hover:translate-x-2">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             
-                <div class="container-places flex justify-between margin-auto">
-                    <div class="flex flex-column">
-                        <div class="flex flex-column margin-auto">
-                            <img src="./src/images/places/iglesia-san-francisco.png" alt="">
-                            <span class="label-d">TEMPLOS</span>
-                            <div class="font-size-24px margin-top-0">
-                                Iglesia de San Francisco de Quito
-                            </div>
-                            <a href="./src/pages/destinos.html">
-                                <button class="margin-12">Más información...</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-column">
-                        <div class="flex flex-column margin-auto">
-                            <img src="./src/images/places/teleferico-quito.png" alt="">
-                            <span class="label-d">MIRADOR</span>
-                            <div class="font-size-24px margin-top-0">
-                                Teleférico de Quito
-                            </div>
-                            <a href="">
-                                <button class="margin-12">Más información..</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex flex-column">
-                        <div class="flex flex-column margin-auto">
-                            <img src="./src/images/places/monumento-mitad-mundo.png" alt="">
-                            <span class="label-d">MUSEOS</span>
-                            <div class="font-size-24px margin-top-0">
-                                Monumento Mitad del Mundo
-                            </div>                            
-                            <a href="" class="text-blue">
-                                <button class="">Más información..</button>
-                            </a>
-                        </div>
-                    </div>
-                </div> 
-            </div>      
-            </section>
-
-            <section id="suggestions">
-                <div class="video-container">
-                    <video autoplay loop muted playsinline>
-                        <source src="./src/videos/visiting-quito.mp4" type="video/mp4">
-                        Tu navegador no soporta la equiteta de video.
-                    </video>
-                    <div class="overlay flex flex-column">
-                        <h3>Top lugares Quito</h3>
-                        <p>2024</p>
-                        <a href="./src/pages/suggestions.html" class="btn-primary font-color-white" target="_blank">Descubre más...</a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="latest-stories">
-                <div class="container">
-                    <div class="more-articles flex justify-between">
-                        <h2>Explore nuestras últimas historias</h2>
-                        <div>
-                            <a href="./src/pages/blog2.html">
-                                <button class="animation">Leer más noticias</button>
-                            </a>
-                            <a href="./src/pages/blog.html">
-                                <button class="animation">Ver más artículos</button>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="stories-container">
-                        <div class="main-story animation">
-                            <img src="./src/images/places/tren-ecuador.png" alt="tren inbambura">
-                            <div class="main-story-text">
-                                <span class="category">NOTICIAS</span>
-                                <h3>El ferrocarril vuelve a recorrer Imbabura</h3>
-                                <p>Ago 26, 2024 • Lectura: 6 min </p>
-                                <p>La rehabilitación del ferrocarril en Imbabura se convirtió en una realidad. Desde agosto de 2024, las estaciones y la línea férrea fueron refaccionadas, gracias a iniciativas locales públicas y privadas.</p>
-                                <a href="./src/pages/blog.html">
-                                    Leer más...
-                                </a>
-                            </div>
-                        </div>
-                        <div class="side-stories">
-                            <div class="side-story animation border-shadow">
-                                <span class="category">FAUNA Y NATURALEZA</span>
-                                <h4>10 Parques naturalez que puedes visitar en Quito</h4>
-                                <p>Nov 1, 2024 • Lectura: 2 min</p>
-                                <a href="./src/pages/blog.html" class="font-color-blue">
-                                    Leer más...
-                                </a>
-                            </div>
-                            <div class="side-story animation border-shadow">
-                                <span class="category">ARQUITECTURA</span>
-                                <h4>El centro histórico de Quito, un paisaje arquitectónico</h4>
-                                <p>Nov 2, 2024 • Lectura: 8 min</p>
-                                <a href="./src/pages/blog.html" class="font-color-blue">
-                                    Leer más...
-                                </a>
-                            </div>
-                            <div class="side-story animation border-shadow">
-                                <span class="category">PLAYAS</span>
-                                <h4>¿Fuera de quito este Feriado? Visita estas playas</h4>
-                                <p>Nov 2, 2024 • Lectura: 3 min</p>
-                                <a href="./src/pages/blog.html" class="font-color-blue">
-                                    Leer más...
-                                </a>
-                            </div>
-                            <div class="side-story animation border-shadow">
-                                <span class="category">FOTOGRAFÍA</span>
-                                <h4>13 museos gratis para disfrutar en Quito</h4>
-                                <p>Nov 5, 2024 • Lectura: 7 min</p>
-                                <a href="./src/pages/blog.html" class="font-color-blue">
-                                    Leer más...
+                <div data-index="1" class="jsx-c41fdbc9c6b06959 relative flex-none w-screen snap-align-start lg:flex-1 min-h-screen-4/5 lg:min-h-184">
+                    <div class="h-full">
+                        <div class="h-full relative">
+                            <img alt="" class="absolute w-full h-full object-cover top-0 left-0 bg-black-200" sizes="100vw" src="./src/images/places/iglesia-compania.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <div class="w-full h-full relative flex items-end styles_panel">
+                                <a href="/" role="button" tabindex="0" class="jsx-c41fdbc9c6b06959 flex items-end justify-between w-full mx-4 mb-6 text-lg leading-tight text-white group lg:mx-6 lg:mb-8 font-display lg:text-2xl card-link">
+                                <span class="jsx-c41fdbc9c6b06959 w-10/12 md:w-2/3">
+                                    Un ícono del barroco en América Latina: la majestuosa Iglesia de la Compañía de Jesús
+                                </span>
+                                <img src="./src/images/icons/arrow-next.svg" alt="next icon" class="transition-transform duration-300 ease-in-out group-hover:transform group-hover:translate-x-2">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-        <section id="newsletter">
-            <div class="flex w-full h-full relative align-items justify-center">
-                <div class="flex flex-column text-center max-w" >
-                    <div>
-                        <img src="./src/images/icons/newsletter.png" alt="" width="100px" height="100px">
-                    </div>
-                    <div>
-                        <p class="font-color-white font-bold font-size-48px margin-bottom">
-                            Suscríbete hoy para no perderte ninguna publicación
-                        </p>
-                    </div>
-                    <div>
-                        <form class="margin-bottom">
-                            <div class="flex align-items w-full">
-                            <input required type="email" class="border-black w-full" placeholder="queHayQuito@email.com" />
-                            <button class="btn-red font-color-white animation">¡Unirme ahora!</button>
+                
+                <div data-index="2" class="jsx-c41fdbc9c6b06959 relative flex-none w-screen snap-align-start lg:flex-1 min-h-screen-4/5 lg:min-h-184">
+                    <div class="h-full">
+                        <div class="h-full relative">
+                            <img alt="" fetchpriority="high" decoding="async" data-nimg="fill" class="absolute w-full h-full object-cover top-0 left-0 bg-black-200" sizes="100vw" src="./src/images/places/virgen-panecillo-quito.png" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <div class="w-full h-full relative flex items-end styles_panel">
+                                <a href="/articles/guide-to-taj-mahal" role="button" tabindex="0" class="jsx-c41fdbc9c6b06959 flex items-end justify-between w-full mx-4 mb-6 text-lg leading-tight text-white group lg:mx-6 lg:mb-8 font-display lg:text-2xl card-link">
+                                    <span class="jsx-c41fdbc9c6b06959 w-10/12 md:w-2/3">
+                                        El Panecillo: Un cerro Emblemático con las Mejores Vistas de la Ciudad
+                                    </span>
+                                    <img src="./src/images/icons/arrow-next.svg" alt="next icon" class="transition-transform duration-300 ease-in-out group-hover:transform group-hover:translate-x-2">
+                                </a>
                             </div>
-                            
-                        </form>
-                        <p class="font-color-white small-font-size">Suscríbete a nuestra newsletter y recibe promociones. Revisa las <a href="./src/pages/terms-policy.html" class="font-color-white font-bold-2 underline small-font-size" target="_blank">Políticas de Privacidad</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="store">
-            <div class="container">
-                <div class="background-black margin-64 padding-32 top-0 left-0 font-color-white relative width-96">
-                    <div class="w-full">
-                        <div class="uppercase margin-12" >
-                        Adquiere nuestros libros
-                        </div>
-                        <div class="margin-12">
-                            <h2>¡Las mejores guías de viaje, historias y leyendas!</h2>
-                        </div>
-                        <div>
-                            <p class="margin-12">
-                                Tanto si está interesado en viajar a la ciudad de Quito, como en hacer un tour o probar un nuevo plato, 
-                                nos comprometemos a inspirarle para que experimente sus viajes de una forma totalmente nueva. 
-                                Nuestra colección de más de 100 libros de seguro que inspirará al viajero que llevas dentro.
-                            </p>
-                            <a href="./src/pages/tienda.html">
-                                <button class="margin-12 font-color-white animation">Ver todos los libros</button>
-                            </a>
-                            
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!--
+            <div class="jsx-c41fdbc9c6b06959 bg-black lg:hidden"><nav class="jsx-c41fdbc9c6b06959 container flex justify-center max-w-xs px-24 gap-x-2"><button type="button" aria-label="Go to slide 1" class="jsx-c41fdbc9c6b06959 block py-6 flex-2"><div class="jsx-c41fdbc9c6b06959 block h-five rounded transition w-full bg-white"></div></button><button type="button" aria-label="Go to slide 2" class="jsx-c41fdbc9c6b06959 block py-6 flex-1"><div class="jsx-c41fdbc9c6b06959 block h-five rounded transition w-full bg-black-400"></div></button><button type="button" aria-label="Go to slide 3" class="jsx-c41fdbc9c6b06959 block py-6 flex-1"><div class="jsx-c41fdbc9c6b06959 block h-five rounded transition w-full bg-black-400"></div></button></nav></div> -->
         </section>
+        <!-- End hero section -->
 
-        <section id="social-media" class="padding-80">
+        <!-- Destionations section --> 
+        <section id="destionations" class="mx-auto max-w-7xl relative my-12 md:mt-20">
             <div class="container">
-                <div class="flex align-items justify-between padding-32-rl">
-                    <div>
-                        <h2 class="font-bold-2 font-color-white font-size-48px">@queHayQuito</h2>
-                    </div>
-                    <div class="flex align-items">
-                        <div>
-                            <p class="uppercase font-color-white font-size-24px padding-16-rl">Síguenos en redes: </p>
+                <div class="text-sm uppercase font-semibold tracking-wide text-black-400 block">
+                    Planifica tu viaje
+                </div>
+                <div class="flex justify-between items-center">
+                    <h2 class="text-4xl md:text-5xl font-display leading-tight font-semibold mb-8 lg:mb-16" data-testid="page-heading">
+                        ¿Cuál es tu próximo destino?
+                    </h2>
+                    <a href="./src/pages/destinos.html" class="hidden lg:inline-block mb-8 px-4 py-2 border border-gray-400 rounded-full transition-all duration-300 ease-in-out hover:bg-bluebrand hover:-translate-y-2 hover:text-white hover:border-transparent group">
+                        <div class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 64 64" class="transition-colors duration-300">
+                                <path class="fill-[#0066FF] group-hover:fill-white" d="M55.6 41.7c4-4.4 6.4-8.9 6.4-11.5C62 24.3 48.6 7 32 7S2 24.3 2 30.2s13.4 23.2 30 23.2c4.6 0 9-1.3 12.9-3.4l10.7 7z"/><circle cx="32" cy="30.2" r="15" fill="#fff"/><path fill="#0066FF" d="M32 21.2c-1 0-1.9.2-2.8.4c1.1.9 1.8 2.3 1.8 3.8c0 2.8-2.2 5-5 5c-1.1 0-2.1-.4-3-1v.7c0 5 4 9 9 9s9-4 9-9s-4-8.9-9-8.9"/>
+                            </svg>
+                            Ver todos los lugares
                         </div>
-                        <div class="sm-icons gap-8">
-                            <div>
-                                <a href="https://www.facebook.com/"  target="_blank">
-                                    <img src="./src/images/icons/sm/facebook.png" class="animation" alt="facebook icon">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <img src="./src/images/icons/sm/instagram.png" class="animation" alt="instagram icon">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://x.com/" target="_blank">
-                                    <img src="./src/images/icons/sm/x.png" class="animation" alt="twitter icon">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://tiktok.com/" target="_blank">
-                                    <img src="./src/images/icons/sm/tiktok.png" class="animation" alt="tiktok icon">
-                                </a>
-                            </div>
-                        </div>
-                        
-                    </div>
+                    </a>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer id="footer" class="background-black-solid ">
-        <div class="bg-white">
-            <div class="container">
-                <div class="flex flex-column">
-                    <div class="flex align-items justify-between padding-32 ">
-                        <div class="flex flex-column w-half">
-                            <div class=" flex align-items justify-between margin-bottom gap-8">
-                                <a href="./index.html">
-                                    <div class="logo width-max-30">
-                                        <img src="./src/images/icons/logoQQ.png" alt="logo empresa">
-                                        <div class="logo-text flex flex-column font-size-20px max-w">
-                                            quéHay
-                                            <span class="font-bold-900 font-size-24px">Quito</span>                    
-                                        </div>                
+            <div class="container mb-8">
+                <ul class="carousel flex overflow-x-scroll md:overflow-x-auto overflow-y-hidden -mx-4">
+                    <li class="carousel-item flex-shrink-0 px-4 pb-2 w-90 md:w-1/3">
+                        <article class="relative flex-shrink-0 lg:flex-shrink mx-4 first:ml-0 last:mr-0 w-full aspect-square">
+                            <img alt="Venice" loading="lazy" width="360" height="360" decoding="async" data-nimg="1" class="max-w-full object-cover rounded w-full h-full max-h-96" style="color:transparent" src="./src/images/places/iglesia-san-francisco.png">
+                            <div class="text-sm uppercase font-semibold tracking-wide z-10 mt-4 text-black-400 block">TEMPLOS</div>
+                            <a href="/" class="text-lg font-bold card-link lg:text-xl">
+                                <div class="flex-col">
+                                    <span>Iglesia de San Francisco de Quito</span>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                            <path fill="#0066FF" fill-rule="evenodd" d="M.998.055A1.4 1.4 0 0 1 1.58.014l.012.001a8.74 8.74 0 0 1 4.04 1.808v9.832c-1.46-1.016-2.781-1.486-4.414-1.758A1.386 1.386 0 0 1 0 8.515v-7.13A1.39 1.39 0 0 1 .998.056ZM6.883 5.89V1.823a8.74 8.74 0 0 1 4.04-1.808l.012-.001a1.385 1.385 0 0 1 1.58 1.372v7.129a1.39 1.39 0 0 1-.521 1.09a3.3 3.3 0 0 0-.6-.056h-.75v-1.5a2.5 2.5 0 0 0-3.761-2.16Zm.01 7.409v-5.25a1.25 1.25 0 0 1 2.5 0v2.75h2a2 2 0 0 1 2 2v.5a.5.5 0 0 1-.5.5h-5.5a.5.5 0 0 1-.5-.5" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-sm text-bluebrand uppercase font-semibold tracking-wide z-10text-black-400 bloc">Leer artículo...</span>
                                     </div>
-                                </a>
-                                <div>
-                                    <span class="font-color-blue font-bold font-size-20px">Obten un 20% en tu primera compra.</span>
                                 </div>
-                            </div>
-                            <div>
-                                <form class="flex flex-column w-full margin-bottom">
-                                    <div class="margin-bottom block">
-                                        <input required type="email" class="border-black font-normal w-full" placeholder="queHayQuito@email.com" size="35" />
+                            </a>
+                        </article>
+                    </li>
+                    <li class="carousel-item flex-shrink-0 px-4 pb-2 w-90 md:w-1/3">
+                        <article class="relative flex-shrink-0 lg:flex-shrink mx-4 first:ml-0 last:mr-0 w-full aspect-square">
+                            <img alt="Sydney" loading="lazy" width="360" height="360" decoding="async" data-nimg="1" class="max-w-full object-cover rounded w-full h-full max-h-96" style="color:transparent" src="./src/images/places/teleferico-quito.png">
+                            <div class="text-sm uppercase font-semibold tracking-wide z-10 mt-4 text-black-400 block"><Main>MIRADOR</Main></div>
+                            <a href="/" class="text-lg font-bold card-link lg:text-xl">
+                                <div class="flex-col">
+                                    <span>Teleférico de Quito</span>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                            <path fill="#0066FF" fill-rule="evenodd" d="M.998.055A1.4 1.4 0 0 1 1.58.014l.012.001a8.74 8.74 0 0 1 4.04 1.808v9.832c-1.46-1.016-2.781-1.486-4.414-1.758A1.386 1.386 0 0 1 0 8.515v-7.13A1.39 1.39 0 0 1 .998.056ZM6.883 5.89V1.823a8.74 8.74 0 0 1 4.04-1.808l.012-.001a1.385 1.385 0 0 1 1.58 1.372v7.129a1.39 1.39 0 0 1-.521 1.09a3.3 3.3 0 0 0-.6-.056h-.75v-1.5a2.5 2.5 0 0 0-3.761-2.16Zm.01 7.409v-5.25a1.25 1.25 0 0 1 2.5 0v2.75h2a2 2 0 0 1 2 2v.5a.5.5 0 0 1-.5.5h-5.5a.5.5 0 0 1-.5-.5" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-sm text-bluebrand uppercase font-semibold tracking-wide z-10text-black-400 bloc">Leer artículo...</span>
                                     </div>
-                                    <button class="btn-red font-color-white animation">Suscríbete</button>
-                                </form>
-                                <p class="small-font-size text-center">Suscríbete a nuestra newsletter y recibe promociones. 
-                                    <br>Revisa las 
-                                    <a href="./src/pages/terms-policy.html" class="font-bold underline small-font-size font-color-blue" target="_blank">
-                                        Políticas de Privacidad
-                                    </a>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                    <li class="jsx-4270600426 carousel-item flex-shrink-0 px-4 pb-2 w-90 md:w-1/3">
+                        <article class="relative flex-shrink-0 lg:flex-shrink mx-4 first:ml-0 last:mr-0 w-full aspect-square">
+                            <img alt="Jordan" loading="lazy" width="360" height="360" decoding="async" data-nimg="1" class="max-w-full object-cover rounded w-full h-full max-h-96" style="color:transparent" src="./src/images/places/monumento-mitad-mundo.png">
+                            <div class="text-sm uppercase font-semibold tracking-wide z-10 mt-4 text-black-400 block"><Main>MUSEOS</div>
+                            <a href="/" class="text-lg font-bold card-link lg:text-xl">
+                                <div class="flex-col">
+                                    <span>Monumento Mitad del Mundo</span>
+                                    <div class="flex items-center gap-2 mt-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
+                                            <path fill="#0066FF" fill-rule="evenodd" d="M.998.055A1.4 1.4 0 0 1 1.58.014l.012.001a8.74 8.74 0 0 1 4.04 1.808v9.832c-1.46-1.016-2.781-1.486-4.414-1.758A1.386 1.386 0 0 1 0 8.515v-7.13A1.39 1.39 0 0 1 .998.056ZM6.883 5.89V1.823a8.74 8.74 0 0 1 4.04-1.808l.012-.001a1.385 1.385 0 0 1 1.58 1.372v7.129a1.39 1.39 0 0 1-.521 1.09a3.3 3.3 0 0 0-.6-.056h-.75v-1.5a2.5 2.5 0 0 0-3.761-2.16Zm.01 7.409v-5.25a1.25 1.25 0 0 1 2.5 0v2.75h2a2 2 0 0 1 2 2v.5a.5.5 0 0 1-.5.5h-5.5a.5.5 0 0 1-.5-.5" clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-sm text-bluebrand uppercase font-semibold tracking-wide z-10text-black-400 bloc">Leer artículo...</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article></li>
+                </ul>
+            </div>
+            <a href="./src/pages/destinos.html" class="mx-auto lg:hidden w-content px-4 py-2 border border-gray-400 rounded-full transition-all duration-300 ease-in-out hover:bg-bluebrand hover:-translate-y-2 hover:text-white hover:border-transparent group" data-testid="a">Ver todos los destinos</a>
+        </section>
+        <!-- End destinations section -->
+
+        <!-- Suggestions section -->
+        <section id="suggestions" class="relative w-full overflow-hidden">
+            <video autoplay="" loop="" muted id="expert-video" playsinline="" class="absolute top-0 left-0 z-0 object-cover w-full h-full" poster="https://lonelyplanetstatic.imgix.net/marketing/best-in-travel/2025/videos/main-page/bit-landscape-7.png">
+                <source src="./src/videos/visiting-quito.mp4" type="video/mp4"><track kind="captions">
+            </video>
+            <div class="absolute top-0 w-full h-full bg-black/30"></div>
+            <div class="absolute bottom-0 w-full h-96 bg-gradient-to-t from-black"></div>
+            <div class="absolute w-full h-full rounded-t-pill  lg:w-[1400px] lg:aspect-square mx-auto lg:h-auto lg:rounded-full overflow-hidden left-1/2 transform -translate-x-1/2 top-7 lg:top-[150px] border border-white"></div>
+            <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1em" class="w-16 h-16 lg:w-[68px] lg:h-[68px] mx-auto mt-20 mb-24 text-white lg:mt-[218px] lg:mb-[132px]" viewBox="0 0 40 40" fill="currentColor" aria-hidden="true"><g clip-path="url(#clip0_1583_247)"><path d="M20 0C8.95431 0 0 8.9543 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95429 31.0457 0 20 0ZM20.8531 38.2909C19.4356 38.3526 18.0157 38.2508 16.6215 37.9875C16.5874 37.9809 16.5567 37.9627 16.5346 37.9359C16.5125 37.9092 16.5003 37.8757 16.5001 37.841C16.4999 37.8063 16.5118 37.7726 16.5337 37.7457C16.5555 37.7188 16.5861 37.7003 16.6201 37.6933C17.7973 37.4575 20.0977 36.8584 21.871 35.5429C23.5595 34.2903 24.8683 32.2572 23.8947 29.775C21.6183 23.9715 14.8179 25.3858 13.7959 25.6347C13.781 25.6384 13.7654 25.6385 13.7504 25.635C13.7354 25.6315 13.7214 25.6245 13.7096 25.6147C13.6978 25.6048 13.6885 25.5923 13.6825 25.5781C13.6764 25.564 13.6737 25.5486 13.6747 25.5333L13.9238 21.3194C14.3736 17.3993 13.5382 15.9855 13.5382 15.9855C11.5247 11.9798 7.06908 12.8367 7.06908 12.8367C6.32041 12.9666 5.60989 13.261 4.98868 13.6985C3.57982 14.7252 2.57721 16.2149 2.15658 17.9066C2.14791 17.9423 2.12631 17.9735 2.09595 17.9942C2.06559 18.0149 2.02864 18.0236 1.99224 18.0186C1.95584 18.0137 1.92258 17.9953 1.8989 17.9673C1.87521 17.9392 1.86279 17.9033 1.86403 17.8666C1.92949 16.8162 2.13 15.7786 2.46062 14.7795C3.77022 10.3568 6.6966 6.58923 10.6577 4.22606C14.6187 1.8629 19.3242 1.07735 23.8381 2.02569C23.8793 2.03413 23.9165 2.05626 23.9436 2.08849C23.9707 2.12072 23.9861 2.16116 23.9873 2.20323C23.9885 2.24531 23.9754 2.28656 23.9502 2.32029C23.925 2.35402 23.8892 2.37825 23.8485 2.38904C22.7718 2.66486 21.7821 3.20809 20.9713 3.96835C20.9713 3.96835 19.2834 5.28118 19.0848 8.56094C19.0373 9.43151 19.1017 10.3046 19.2764 11.1587L20.953 19.6124C21.1817 20.8159 21.861 21.8868 22.8524 22.6065C23.6394 23.1934 24.6259 23.4467 25.5982 23.3115C25.5982 23.3115 29.3041 23.1402 28.7043 19.4558L28.2518 17.2525C28.2467 17.2278 28.2466 17.2023 28.2516 17.1776C28.2565 17.1529 28.2665 17.1294 28.2808 17.1087C28.2951 17.0879 28.3135 17.0703 28.3348 17.0568C28.3561 17.0434 28.3799 17.0344 28.4048 17.0304C29.448 16.8637 34.3699 15.7435 34.6394 9.42477C34.6408 9.3857 34.6544 9.34804 34.6782 9.31707C34.7021 9.28609 34.735 9.26335 34.7724 9.25202C34.8099 9.24068 34.8499 9.24133 34.8869 9.25386C34.9239 9.2664 34.9561 9.29019 34.979 9.32192C36.8953 12.0086 38.0511 15.1626 38.3245 18.4514C38.5979 21.7401 37.9787 25.0417 36.5323 28.0079C35.0859 30.9741 32.8659 33.4951 30.1064 35.3049C27.3468 37.1147 24.15 38.1463 20.8531 38.2908V38.2909Z"></path></g>
+                </svg>
+                <h1 class="w-full tracking-widest text-center text-white drop-shadow">
+                    <div class="font-poppins font-semibold leading-[0.85] mb-4 w-full text-center text-[70px] lg:text-[100px] ">Quito, <br>lugares TOP</div> 
+                    <div class="text-[30px] lg:text-4xl font-semibold leading-none font-neue">2025</div>
+                </h1>
+                <div class="flex justify-center mt-12 mb-20 lg:mb-[166px] text-center "><div>
+                <a href="./src/pages/suggestions.html" class="btn rounded-full bg-bluebrand px-4 py-2 text-sm font-medium text-white transition-transform duration-300 ease-in-out hover:bg-[#0052CC] hover:transform hover:-translate-y-2" data-testid="a">Descubre a los ganadores</a></div></div></div>
+        </section>
+        <!-- End Suggestions section -->
+
+        <section class="relative my-12 md:mt-20">
+            <section class=" max-w-full mx-4 my-16 articles lg:my-24 md:mx-auto md:container">
+                <div class="">
+                    <header class="flex items-end justify-between mt-5 mb-10 lg:mt-8 lg:mb-14">
+                        <h2 class="text-2xl md:text-5xl md:leading-relaxed">Explore nuestras últimas historias</h2>
+                        <div class=" flex-none hidden md:inline-block">
+                            <a href="./src/pages/blog2.html" class="mr-4 ">
+                                Leer más noticias
+                            </a>
+                            <a href="./src/pages/blog.html" class="">
+                                Ver más artículos
+                            </a>
+                        </div>
+                    </header>
+                </div>
+            <div class="jsx-f704f42be0b5c3bb relative z-0 lg:flex lg:gap-x-8">
+                <div class="jsx-f704f42be0b5c3bb mb-8 lg:w-3/5 lg:shrink-0 lg:mb-auto">
+                    <div class="relative">
+                        
+                        <div class="relative lg:rounded overflow-hidden lg:h-[688px]">
+                        <img alt="" loading="lazy" width="730" height="630" decoding="async" data-nimg="1" class="max-w-full hidden object-cover w-full h-full rounded -z-10 lg:block" src="./src/images/places/tren-ecuador.png" style="color: transparent;">
+                        <img alt="" loading="lazy" width="780" height="425" decoding="async" data-nimg="1" class="max-w-full object-cover -z-10 rounded lg:hidden w-full aspect-[350/200]" src="./src/images/places/tren-ecuador.png" style="color: transparent;">
+                        <div class="top-0 flex items-end w-full h-full pt-4 lg:absolute lg:bg-gradient-to-t from-transparent-80 via-transparent-40 to-transparent lg:p-8">
+                            <div class="lg:w-2/3 lg:pb-8">
+                                <p class="relative z-10 uppercase label-sm text-black-400 lg:text-white">Noticias &amp; Eventos</p>
+                                <a href="#" class="inline-block my-2 font-semibold card-link heading-04 lg:text-white">
+                                    El ferrocarril vuelve a recorrer Imbabura
+                                </a>
+                                <p class="relative text-black-400 lg:text-white">Feb 5, 2025 • Lectura 6 min</p>
+                                <p class="relative hidden mt-4 lg:block lg:text-white">La rehabilitación del ferrocarril en Imbabura se convirtió en una realidad. Desde agosto de 2024, las estaciones y la línea férrea fueron refaccionadas, gracias a iniciativas locales públicas y privadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-full overflow-x-hidden px-4 lg:container w-full carousel-wrapper lg:px-0">
+                <ul class="carousel flex overflow-x-scroll md:overflow-x-auto overflow-y-hidden -mx-4">
+                    <li class="jsx-4270600426 carousel-item flex-shrink-0 px-4 pb-2 w-full md:w-full"><div class="jsx-f704f42be0b5c3bb flex flex-col gap-y-4 lg:h-full">
+                        <div class="relative">
+                            <article class="relative flex items-center rounded-md h-full p-4 hover:shadow-md focus:shadow-md bg-[#F0F7FC] border border-[#E0EEFA] md:my-auto lg:h-[160px]">
+                                <div class="flex-auto w-0">
+                                    <div class="text-sm uppercase font-semibold tracking-wide relative z-10 mb-2 w-90 text-black-400 block">FAUNA Y NATURALEZA</div>
+                                    <a href="/articles/things-to-know-before-traveling-to-belize" class="lg:text-lg text-black hover:text-black font-semibold card-link mb-1 line-clamp-3">10 Parques naturalez que puedes visitar en Quito</a>
+                                    <p class="text-sm text-black-400">Feb 5, 2025 • Lectura 7 min</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="relative">
+                            <article class="relative flex items-center rounded-md h-full p-4 hover:shadow-md focus:shadow-md bg-[#F0F7FC] border border-[#E0EEFA] md:my-auto lg:h-[160px]">
+                                <div class="flex-auto w-0">
+                                    <div class="text-sm uppercase font-semibold tracking-wide relative z-10 mb-2 w-90 text-black-400 block">ARQUITECTURA</div>
+                                    <a href="/articles/things-to-know-before-traveling-to-belize" class="lg:text-lg text-black hover:text-black font-semibold card-link mb-1 line-clamp-3">El centro histórico de Quito, un paisaje arquitectónico</a>
+                                    <p class="text-sm text-black-400">Feb 5, 2025 • Lectura 8 min</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="relative">
+                            <article class="relative flex items-center rounded-md h-full p-4 hover:shadow-md focus:shadow-md bg-[#F0F7FC] border border-[#E0EEFA] md:my-auto lg:h-[160px]">
+                                <div class="flex-auto w-0">
+                                    <div class="text-sm uppercase font-semibold tracking-wide relative z-10 mb-2 w-90 text-black-400 block">FOTOGRAFÍA</div>
+                                    <a href="/articles/things-to-know-before-traveling-to-belize" class="lg:text-lg text-black hover:text-black font-semibold card-link mb-1 line-clamp-3">13 museos gratis para disfrutar en Quito</a>
+                                    <p class="text-sm text-black-400">Feb 5, 2025 • Lectura 7 min</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="relative">
+                            <article class="relative flex items-center rounded-md h-full p-4 hover:shadow-md focus:shadow-md bg-[#F0F7FC] border border-[#E0EEFA] md:my-auto lg:h-[160px]">
+                                <div class="flex-auto w-0">
+                                    <div class="text-sm uppercase font-semibold tracking-wide relative z-10 mb-2 w-90 text-black-400 block">FAUNA Y NATURALEZA</div>
+                                    <a href="/articles/things-to-know-before-traveling-to-belize" class="lg:text-lg text-black hover:text-black font-semibold card-link mb-1 line-clamp-3">10 Parques naturalez que puedes visitar en Quito</a>
+                                    <p class="text-sm text-black-400">Feb 5, 2025 • Lectura 7 min</p>
+                                </div>
+                            </article>
+                        </div>  
+                        <div class="jsx-f704f42be0b5c3bb flex justify-center space-x-4">
+                            <a href="./src/pages/blog2.html" class="jsx-f704f42be0b5c3bb block w-full mt-6 text-center lg:hidden px-4 py-2 border border-gray-400 rounded-full transition-all duration-300 ease-in-out hover:bg-bluebrand hover:-translate-y-2 hover:text-white hover:border-transparent">Leer más noticias</a>
+                            <a href="./src/pages/blog.html" class="jsx-f704f42be0b5c3bb block w-full mt-6 text-center lg:hidden px-4 py-2 border border-gray-400 rounded-full transition-all duration-300 ease-in-out hover:bg-bluebrand hover:-translate-y-2 hover:text-white hover:border-transparent group">Leer más artículos</a>
+                        </div>
+            </section>
+        </section>
+        
+        <!-- Newsletter section -->
+        <section id="newsletter">
+            <div class="h-full">
+                <div class="h-full relative">
+                    <div class="absolute w-full h-full object-cover top-0 left-0 bg-black-200 bg-bluebrand">
+                        <img alt="" loading="lazy" decoding="async" data-nimg="fill" class="absolute w-full h-full object-cover top-0 left-0 bg-black-200 bg-sand-300" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" src="https://lonelyplanetstatic.imgix.net/marketing/2024/newsletter/topography-background-lg.svg?auto=format&amp;q=40">
+                    </div>
+                        <div class="w-full h-full relative">
+                            <div class="mx-auto pt-12 container text-center max-w-2xl pb-16 min-h-[492px] md:min-h-[385px] lg:min-h-[428px] lg:pb-20"><div class="rounded-full inline-block p-3 mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" class="inline-block text-4xl" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M21.3987 23.4939L18.3164 26.5762L21.3986 29.6585L24.481 26.5763L21.3987 23.4939Z" fill="#fff ">
+                                    </path><path d="M37.4196 15.6611H35.8196C35.8171 17.611 35.0415 19.4803 33.6627 20.859C32.284 22.2377 30.4147 23.0134 28.4648 23.0158V24.6158C30.4147 24.6183 32.284 25.3939 33.6627 26.7727C35.0414 28.1514 35.8171 30.0207 35.8195 31.9705H37.4195C37.422 30.0207 38.1976 28.1514 39.5764 26.7727C40.9551 25.3939 42.8244 24.6183 44.7742 24.6158V23.0158C42.8244 23.0134 40.9551 22.2377 39.5764 20.859C38.1977 19.4802 37.422 17.611 37.4196 15.6611Z" fill="#fff"></path><path d="M20.5617 8.18457H18.9617C18.9607 9.29401 18.5195 10.3577 17.735 11.1422C16.9505 11.9267 15.8868 12.3679 14.7773 12.369V13.969C15.8868 13.97 16.9505 14.4112 17.735 15.1957C18.5195 15.9802 18.9607 17.0439 18.9617 18.1533H20.5617C20.5628 17.0439 21.004 15.9802 21.7885 15.1957C22.573 14.4112 23.6367 13.97 24.7461 13.969V12.369C23.6367 12.3679 22.573 11.9267 21.7885 11.1422C21.004 10.3577 20.5628 9.29401 20.5617 8.18457Z" fill="#fff"></path><path d="M57.4164 21.0754L36.6164 6.37226C35.265 5.4202 33.6523 4.90918 31.9992 4.90918C30.3461 4.90918 28.7334 5.4202 27.382 6.37226L25.5414 7.67383C25.3693 7.79486 25.2227 7.94865 25.1101 8.12641C24.9975 8.30417 24.9211 8.50239 24.8852 8.70973C24.8493 8.91707 24.8547 9.12945 24.9011 9.33471C24.9474 9.53996 25.0338 9.73406 25.1552 9.90588C25.2767 10.0777 25.4309 10.2239 25.6089 10.336C25.787 10.4482 25.9854 10.5241 26.1928 10.5594C26.4003 10.5948 26.6126 10.5888 26.8178 10.542C27.0229 10.4951 27.2168 10.4082 27.3883 10.2863L29.2289 8.98476C30.0401 8.41432 31.0076 8.1082 31.9992 8.1082C32.9909 8.1082 33.9584 8.41432 34.7695 8.98476L55.5695 23.6879C55.8438 23.8876 56.096 24.1161 56.3218 24.3693L37.6773 37.5488C37.6173 37.6029 37.5616 37.6618 37.511 37.7248L36.6164 37.0925C35.2654 36.1393 33.6526 35.6276 31.9992 35.6276C30.3458 35.6276 28.733 36.1393 27.382 37.0925L26.4874 37.7248C26.4368 37.6618 26.3812 37.6029 26.3211 37.5488L7.67666 24.3693C7.90243 24.1161 8.15461 23.8876 8.4289 23.6879L14.8414 19.1551C15.1874 18.91 15.422 18.5376 15.4936 18.1197C15.5651 17.7017 15.4678 17.2725 15.2231 16.9262C14.9783 16.58 14.6061 16.3451 14.1882 16.2732C13.7703 16.2012 13.341 16.2981 12.9945 16.5426L6.58203 21.0754C5.53742 21.815 4.68516 22.7941 4.09661 23.9306C3.50807 25.0672 3.20035 26.3283 3.19922 27.6082V50.2145C3.20171 52.3354 4.04537 54.3688 5.54512 55.8686C7.04487 57.3683 9.07825 58.212 11.1992 58.2145H52.7992C54.9202 58.212 56.9536 57.3683 58.4533 55.8686C59.9531 54.3688 60.7967 52.3354 60.7992 50.2145V27.6082C60.7981 26.3283 60.4904 25.0672 59.9018 23.9306C59.3133 22.7941 58.461 21.815 57.4164 21.0754ZM57.5742 27.4021C57.5772 27.4718 57.5992 27.5381 57.5992 27.6082V50.2145C57.593 50.7321 57.5019 51.2452 57.3297 51.7334L40.241 39.6546L57.5742 27.4021ZM6.66885 51.7333C6.49658 51.2452 6.40549 50.7321 6.39922 50.2145V27.6082C6.39922 27.538 6.42119 27.4718 6.42421 27.4021L23.7574 39.6546L6.66885 51.7333ZM11.1992 55.0145C10.2909 55.0123 9.40222 54.7503 8.63808 54.2593L29.2289 39.7051C30.0401 39.1346 31.0076 38.8285 31.9992 38.8285C32.9909 38.8285 33.9584 39.1346 34.7695 39.7051L55.3604 54.2593C54.5962 54.7503 53.7075 55.0123 52.7992 55.0145H11.1992Z" fill="#fff"></path>
+                                </svg>
+                            </div>
+                            <div class="">
+                                <p class="pb-4 text-white text-2xl font-semibold max-w-[350px] mx-auto md:max-w-full md:text-3xl lg:text-4xl">
+                                    Suscríbete hoy para y no te pierdas ninguna publicación
                                 </p>
                             </div>
-                        </div>
-                        <div class="flex flex-column margin-top">
-                            <h3 class="uppercase margin-bottom">Acerca de Nosotros</h3>
-                            <div class="flex flex-column">
-                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Historia</a>
-                                <a href="#footer" class="padding-16-rl margin-bottom text-blue">Trabaja con nosotros</a>
-                                <a href="./src/pages/terms-policy.html" class="padding-16-rl margin-bottom text-blue" target="_blank">Políticas de privacidad</a>
-                            </div>
-                            <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank">
-                                <div class="margin-1-rl margin-bottom margin-top uppercase ">¿Necesitas ayuda? </div>
-                                <button class="btn-whatsapp animation" >
-                                    <div class="flex align-items">
-                                        <img src="./src/images/icons/sm/whatsapp.png" alt="whatsapp-icon" class="display-none">
-                                        <span class="margin-1-rl">Contáctanos aquí </span>
-                                    </div>
-                                </button>
-                            </a>
-                            
-                        </div>
-                        
-                        <div class="map-container flex flex-column align-start margin-top">
-                            <h3 class="uppercase margin-bottom">Encuéntranos en:</h3>
-                            <div class="map-styles">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"  
-                                aria-label="Mapa Qué Hay Quito, Ecuador">
-                            </iframe>
+                            <div class="lg:min-w-112">
+                                <div class="text-center">
+                                    <form>
+                                        <input id="" required="" type="email" name="" placeholder="Ingresa tu email en este campo" class="rounded-full border-0 focus:border-black-300 px-8 py-3 font-light w-full h-10 max-w-full my-4 mb-0 leading-none bg-white placeholder-black md:w-3/5 xl:w-3/5 focus:border-b-redbrand" value="">
+                                        <button class="btn w-full h-10 mt-4 mb-4 ml-0 px-4 text-white leading-none btn btn-primary md:mt-0  md:w-auto rounded-full bg-redbrand transition-transform duration-300 ease-in-out hover:bg-[#ca273f] hover:transform hover:-translate-y-2 focus-visible:outline-red-100   " type="submit" data-testid="btn">Unirme ahora</button>
+                                        <p class="text-xs text-center text-white">
+                                            Suscríbete a nuestra newsletter y recibe promociones.
+                                            <span class="whitespace-nowrap">Revisa las
+                                                <a href="./src/pages/terms-policy.html" class="underline text-blue">Politicas de Privacidad.</a>
+                                            </span>
+                                        </p>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+            </div>
+        </section>
+        <!-- EndNewsletter section -->
+
+
+        <!-- Store section -->
+        <section id="store" class="relative">
+            <div class="flex justify-center bg-black">
+                <div class="w-full pb-20 md:pb-0 md:min-h-184 relative md:max-w-[1920px]">
+                    <div class="md:hidden">
+                        <img alt="" loading="lazy" width="100%" height="260" decoding="async" data-nimg="1" class="max-w-full object-cover" style="color:transparent"  src="/src/images/store-items/portada-marketing.jpg">
+                    </div>
+                    <img alt="" loading="lazy" width="1920" height="768" class="max-w-full object-cover hidden md:block max-h-[800px]" style="color:transparent" src="./src/images/store-items/portada-marketing.jpg">
+                    <div class="bg-black/30 md:absolute md:top-0 md:left-0 md:mt-16 md:ml-16 container">
+                        <div class=" text-white w-96 max-w-full p-8">
+                            <p class="uppercase text-sm font-bold">Adquiere nuestros libros</p>
+                            <h2 class="text-4xl md:text-5xl font-display leading-tight font-semibold pt-2">
+                                ¡Las mejores guías de viaje, historias &amp; leyendas!
+                            </h2>
+                            <p class="pt-4 pb-8 leading-tight text-lg">
+                                Tanto si está interesado en viajar a la ciudad de Quito, como en hacer un tour o probar un nuevo plato, nos comprometemos a inspirarle para que experimente sus viajes de una forma totalmente nueva. Nuestra colección de más de 100 libros de seguro que inspirará al viajero que llevas dentro.
+                            </p>
+                            <a href="./src/pages/tienda.html" class="inline-block px-4 py-2 border border-gray-400 rounded-full transition-all duration-300 ease-in-out hover:bg-bluebrand hover:-translate-y-2 hover:text-white hover:border-transparent group" target="_blank" rel="noopener noreferrer">
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                                    Ver todos los libros
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Store section -->
+
+
+        <!-- Social media section -->
+        <section id="social-media" class="relative py-8    md:py-20 bg-bluebrand flex justify-center">
+            <article class="container flex flex-col">
+                <div class="flex px-24 items-center justify-around xl:justify-between"> 
+                    <h2 class="max-w-7xl text-4xl md:text-5xl font-display leading-tight font-semibold text-white" >
+                        <a class="no-underline hover:cursor-pointer" target="_blank" href="https://instagram.com/">@queHayQuito</a>
+                    </h2>
+                    <div class="hidden xl:flex">
+                        <div class="flex flex-col items-center md:flex-row">
+                            <h2 class="mb-2 text-sm font-semibold tracking-widest text-white uppercase md:mb-0 md:mr-3 lg:text-md">Síguenos en redes:</h2>
+                            <nav class="">
+                                <ul class="flex space-x-4 lg:space-x-2">
+                                    <li data-testid="facebook">
+                                        <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://www.facebook.com/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Lonely Planet on facebook"><path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#fff"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li data-testid="instagram">
+                                        <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://www.instagram.com/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Lonely Planet on instagram"><path d="M12 2.16094C15.2063 2.16094 15.5859 2.175 16.8469 2.23125C18.0188 2.28281 18.6516 2.47969 19.0734 2.64375C19.6313 2.85938 20.0344 3.12188 20.4516 3.53906C20.8734 3.96094 21.1313 4.35938 21.3469 4.91719C21.5109 5.33906 21.7078 5.97656 21.7594 7.14375C21.8156 8.40937 21.8297 8.78906 21.8297 11.9906C21.8297 15.1969 21.8156 15.5766 21.7594 16.8375C21.7078 18.0094 21.5109 18.6422 21.3469 19.0641C21.1313 19.6219 20.8688 20.025 20.4516 20.4422C20.0297 20.8641 19.6313 21.1219 19.0734 21.3375C18.6516 21.5016 18.0141 21.6984 16.8469 21.75C15.5813 21.8063 15.2016 21.8203 12 21.8203C8.79375 21.8203 8.41406 21.8063 7.15313 21.75C5.98125 21.6984 5.34844 21.5016 4.92656 21.3375C4.36875 21.1219 3.96563 20.8594 3.54844 20.4422C3.12656 20.0203 2.86875 19.6219 2.65313 19.0641C2.48906 18.6422 2.29219 18.0047 2.24063 16.8375C2.18438 15.5719 2.17031 15.1922 2.17031 11.9906C2.17031 8.78438 2.18438 8.40469 2.24063 7.14375C2.29219 5.97187 2.48906 5.33906 2.65313 4.91719C2.86875 4.35938 3.13125 3.95625 3.54844 3.53906C3.97031 3.11719 4.36875 2.85938 4.92656 2.64375C5.34844 2.47969 5.98594 2.28281 7.15313 2.23125C8.41406 2.175 8.79375 2.16094 12 2.16094ZM12 0C8.74219 0 8.33438 0.0140625 7.05469 0.0703125C5.77969 0.126563 4.90313 0.332812 4.14375 0.628125C3.35156 0.9375 2.68125 1.34531 2.01563 2.01562C1.34531 2.68125 0.9375 3.35156 0.628125 4.13906C0.332812 4.90313 0.126563 5.775 0.0703125 7.05C0.0140625 8.33437 0 8.74219 0 12C0 15.2578 0.0140625 15.6656 0.0703125 16.9453C0.126563 18.2203 0.332812 19.0969 0.628125 19.8563C0.9375 20.6484 1.34531 21.3188 2.01563 21.9844C2.68125 22.65 3.35156 23.0625 4.13906 23.3672C4.90313 23.6625 5.775 23.8687 7.05 23.925C8.32969 23.9812 8.7375 23.9953 11.9953 23.9953C15.2531 23.9953 15.6609 23.9812 16.9406 23.925C18.2156 23.8687 19.0922 23.6625 19.8516 23.3672C20.6391 23.0625 21.3094 22.65 21.975 21.9844C22.6406 21.3188 23.0531 20.6484 23.3578 19.8609C23.6531 19.0969 23.8594 18.225 23.9156 16.95C23.9719 15.6703 23.9859 15.2625 23.9859 12.0047C23.9859 8.74688 23.9719 8.33906 23.9156 7.05938C23.8594 5.78438 23.6531 4.90781 23.3578 4.14844C23.0625 3.35156 22.6547 2.68125 21.9844 2.01562C21.3188 1.35 20.6484 0.9375 19.8609 0.632812C19.0969 0.3375 18.225 0.13125 16.95 0.075C15.6656 0.0140625 15.2578 0 12 0Z" fill="#fff"></path><path d="M12 5.83594C8.59688 5.83594 5.83594 8.59688 5.83594 12C5.83594 15.4031 8.59688 18.1641 12 18.1641C15.4031 18.1641 18.1641 15.4031 18.1641 12C18.1641 8.59688 15.4031 5.83594 12 5.83594ZM12 15.9984C9.79219 15.9984 8.00156 14.2078 8.00156 12C8.00156 9.79219 9.79219 8.00156 12 8.00156C14.2078 8.00156 15.9984 9.79219 15.9984 12C15.9984 14.2078 14.2078 15.9984 12 15.9984Z" fill="#fff"></path><path d="M19.8469 5.59214C19.8469 6.38902 19.2 7.0312 18.4078 7.0312C17.6109 7.0312 16.9688 6.38433 16.9688 5.59214C16.9688 4.79526 17.6156 4.15308 18.4078 4.15308C19.2 4.15308 19.8469 4.79995 19.8469 5.59214Z" fill="#fff"></path></svg>
+                                        </a>
+                                    </li>
+                                    <li data-testid="twitter">
+                                        <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://twitter.com/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 300 300" fill="currentColor" role="img" aria-label="Lonely Planet on twitter"><path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66" fill="#fff"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li data-testid="tiktok">
+                                        <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://www.tiktok.com/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Lonely Planet on tiktok"><path d="M17.0725 0H13.0278V16.3478C13.0278 18.2957 11.4722 19.8957 9.53626 19.8957C7.60034 19.8957 6.04469 18.2957 6.04469 16.3478C6.04469 14.4348 7.56577 12.8695 9.43257 12.8V8.69567C5.31872 8.7652 2 12.1391 2 16.3478C2 20.5913 5.38786 24 9.57085 24C13.7538 24 17.1416 20.5565 17.1416 16.3478V7.9652C18.6627 9.07827 20.5295 9.73913 22.5 9.77393V5.66957C19.4579 5.56522 17.0725 3.06087 17.0725 0Z" fill="#fff"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="flex items-center justify-center mt-8 xl:hidden lg:mt-0">
+                    <div class="flex flex-col items-center md:flex-row">
+                        <h2 class="mb-2 text-sm font-semibold tracking-widest text-white uppercase md:mb-0 md:mr-3 lg:text-md">Síguenos en redes:</h2>
+                        <nav class="">
+                            <ul class="flex space-x-4 lg:space-x-2">
+                                <li data-testid="facebook">
+                                    <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://www.facebook.com/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Lonely Planet on facebook"><path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#fff"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li data-testid="instagram">
+                                    <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://www.instagram.com/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Lonely Planet on instagram"><path d="M12 2.16094C15.2063 2.16094 15.5859 2.175 16.8469 2.23125C18.0188 2.28281 18.6516 2.47969 19.0734 2.64375C19.6313 2.85938 20.0344 3.12188 20.4516 3.53906C20.8734 3.96094 21.1313 4.35938 21.3469 4.91719C21.5109 5.33906 21.7078 5.97656 21.7594 7.14375C21.8156 8.40937 21.8297 8.78906 21.8297 11.9906C21.8297 15.1969 21.8156 15.5766 21.7594 16.8375C21.7078 18.0094 21.5109 18.6422 21.3469 19.0641C21.1313 19.6219 20.8688 20.025 20.4516 20.4422C20.0297 20.8641 19.6313 21.1219 19.0734 21.3375C18.6516 21.5016 18.0141 21.6984 16.8469 21.75C15.5813 21.8063 15.2016 21.8203 12 21.8203C8.79375 21.8203 8.41406 21.8063 7.15313 21.75C5.98125 21.6984 5.34844 21.5016 4.92656 21.3375C4.36875 21.1219 3.96563 20.8594 3.54844 20.4422C3.12656 20.0203 2.86875 19.6219 2.65313 19.0641C2.48906 18.6422 2.29219 18.0047 2.24063 16.8375C2.18438 15.5719 2.17031 15.1922 2.17031 11.9906C2.17031 8.78438 2.18438 8.40469 2.24063 7.14375C2.29219 5.97187 2.48906 5.33906 2.65313 4.91719C2.86875 4.35938 3.13125 3.95625 3.54844 3.53906C3.97031 3.11719 4.36875 2.85938 4.92656 2.64375C5.34844 2.47969 5.98594 2.28281 7.15313 2.23125C8.41406 2.175 8.79375 2.16094 12 2.16094ZM12 0C8.74219 0 8.33438 0.0140625 7.05469 0.0703125C5.77969 0.126563 4.90313 0.332812 4.14375 0.628125C3.35156 0.9375 2.68125 1.34531 2.01563 2.01562C1.34531 2.68125 0.9375 3.35156 0.628125 4.13906C0.332812 4.90313 0.126563 5.775 0.0703125 7.05C0.0140625 8.33437 0 8.74219 0 12C0 15.2578 0.0140625 15.6656 0.0703125 16.9453C0.126563 18.2203 0.332812 19.0969 0.628125 19.8563C0.9375 20.6484 1.34531 21.3188 2.01563 21.9844C2.68125 22.65 3.35156 23.0625 4.13906 23.3672C4.90313 23.6625 5.775 23.8687 7.05 23.925C8.32969 23.9812 8.7375 23.9953 11.9953 23.9953C15.2531 23.9953 15.6609 23.9812 16.9406 23.925C18.2156 23.8687 19.0922 23.6625 19.8516 23.3672C20.6391 23.0625 21.3094 22.65 21.975 21.9844C22.6406 21.3188 23.0531 20.6484 23.3578 19.8609C23.6531 19.0969 23.8594 18.225 23.9156 16.95C23.9719 15.6703 23.9859 15.2625 23.9859 12.0047C23.9859 8.74688 23.9719 8.33906 23.9156 7.05938C23.8594 5.78438 23.6531 4.90781 23.3578 4.14844C23.0625 3.35156 22.6547 2.68125 21.9844 2.01562C21.3188 1.35 20.6484 0.9375 19.8609 0.632812C19.0969 0.3375 18.225 0.13125 16.95 0.075C15.6656 0.0140625 15.2578 0 12 0Z" fill="#fff"></path><path d="M12 5.83594C8.59688 5.83594 5.83594 8.59688 5.83594 12C5.83594 15.4031 8.59688 18.1641 12 18.1641C15.4031 18.1641 18.1641 15.4031 18.1641 12C18.1641 8.59688 15.4031 5.83594 12 5.83594ZM12 15.9984C9.79219 15.9984 8.00156 14.2078 8.00156 12C8.00156 9.79219 9.79219 8.00156 12 8.00156C14.2078 8.00156 15.9984 9.79219 15.9984 12C15.9984 14.2078 14.2078 15.9984 12 15.9984Z" fill="#fff"></path><path d="M19.8469 5.59214C19.8469 6.38902 19.2 7.0312 18.4078 7.0312C17.6109 7.0312 16.9688 6.38433 16.9688 5.59214C16.9688 4.79526 17.6156 4.15308 18.4078 4.15308C19.2 4.15308 19.8469 4.79995 19.8469 5.59214Z" fill="#fff"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li data-testid="twitter">
+                                    <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://twitter.com/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 300 300" fill="currentColor" role="img" aria-label="Lonely Planet on twitter"><path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66" fill="#fff"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li data-testid="tiktok">
+                                    <a target="_blank" rel="noopener noreferrer" class="no-underline" href="https://www.tiktok.com/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="text-xl text-white" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Lonely Planet on tiktok"><path d="M17.0725 0H13.0278V16.3478C13.0278 18.2957 11.4722 19.8957 9.53626 19.8957C7.60034 19.8957 6.04469 18.2957 6.04469 16.3478C6.04469 14.4348 7.56577 12.8695 9.43257 12.8V8.69567C5.31872 8.7652 2 12.1391 2 16.3478C2 20.5913 5.38786 24 9.57085 24C13.7538 24 17.1416 20.5565 17.1416 16.3478V7.9652C18.6627 9.07827 20.5295 9.73913 22.5 9.77393V5.66957C19.4579 5.56522 17.0725 3.06087 17.0725 0Z" fill="#fff"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- End Social media section -->
+
+            
+        <!-- Footer section -->
+    <footer id="footer" class="bg-black">
+        <div class="bg-white">
+            <div class="container mx-auto">
+                <div class="flex flex-col">
+                <div class="flex items-center justify-evenly p-8 md:flex-row flex-col">
+                    <div class="flex flex-col max-w-lg">
+                    <div class="flex items-center justify-between mb-2 gap-2">
+                        <a href="#">
+                        <div class="flex items-center">
+                            <img
+                            src="./src/images/icons/logo/logoQQ.svg"
+                            alt="logo empresa"
+                            width=100px
+                            height=100px
+                            class="mr-2"
+                            />
+                            
+                        </div>
+                    </a>
+                        <div>
+                        <span class="text-bluebrand font-bold text-xl">
+                            Obten un 20% en tu primera compra
+                        </span>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="flex flex-col w-full mb-4">
+                        <div class="mb-2 block">
+                            <input
+                            required
+                            type="email"
+                            class="border border-black rounded-full font-normal w-full p-2"
+                            placeholder="Ingresa tu email en este campo"
+                            />
+                        </div>
+                        <button class="rounded-full bg-redbrand text-white py-2 px-4 hover:bg-[#ca273f] transition duration-300">
+                            Suscríbete
+                        </button>
+                        </form>
+                        <p class="text-sm text-center">
+                        Suscríbete a nuestra newsletter y recibe promociones.
+                        <br />
+                        Revisa las
+                        <a
+                            href="./src/pages/terms-policy.html"
+                            class="font-bold underline text-sm text-bluebrand ml-1"
+                            target="_blank"
+                        >
+                            Políticas de Privacidad
+                        </a>
+                        </p>
+                    </div>
+                    </div>
+                    <div class="flex flex-col mt-4">
+                    <h3 class="uppercase mb-4 font-bold">Acerca de Nosotros</h3>
+                    <div class="flex flex-col">
+                        <a href="#footer" class="py-2 px-4 mb-2 hover:text-bluebrand hover:font-bold">
+                        Historia
+                        </a>
+                        <a href="#footer" class="py-2 px-4 mb-2 hover:text-bluebrand hover:font-bold">
+                        Trabaja con nosotros
+                        </a>
+                        <a href="./src/pages/terms-policy.html" class="py-2 px-4 mb-2 hover:text-bluebrand hover:font-bold" target="_blank">
+                        Políticas de privacidad
+                        </a>
+                    </div>
+                    <a
+                        href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..."
+                        target="_blank"
+                    >
+                        <div class="mx-1 mb-2 mt-4 uppercase font-bold">¿Necesitas ayuda?</div>
+                        <button class="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition duration-300">
+                        <div class="flex items-center">
+                            <img src="./src/images/icons/whatsapp-icon.svg" alt="whatsapp-icon">
+                            <span class="ml-1">Contáctanos aquí</span>
+                        </div>
+                        </button>
+                    </a>
+                    </div>
+                    <div class="flex flex-col items-start mt-4 md:items-center">
+                    <h3 class="uppercase mb-4 font-bold">Encuéntranos en:</h3>
+                    <div class="w-full h-64">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.16357919355!2d-78.50330149447923!3d-0.2124413000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1731338959953!5m2!1ses-419!2sec"
+                        class="w-full h-full"
+                        aria-label="Mapa Qué Hay Quito, Ecuador"
+                        ></iframe>
+                    </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
-        <div class="padding-32 font-color-white small-font-size text-center">
-            &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados.
+        <div class="py-8 text-white text-sm text-center">
+        &copy; Copyright 2024 | QuéHayQuito Company S.A | Todos los derechos reservados.
         </div>
     </footer>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank" id="btn-whatsapp" class="floating-btn">
-        <img src="./src/images/icons/sm/whatsapp.png" alt="WhatsApp">
+    <a href="https://wa.me/5930995910820?text=Hola%20QuéHayQuito!%20Me%20gustaría%20saber..." target="_blank" id="btn-whatsapp" class="fixed w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg cursor-pointer z-50 transition-transform duration-300 ease-in-out hover:scale-105 bottom-4 right-8">
+        <img src="./src/images/icons/whatsapp-icon.svg" alt="whatsapp-icon">
+        <span class="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-3 py-1 rounded-lg text-sm opacity-0 invisible transition-opacity duration-300 ease-in-out hover:opacity-100 hover:visible whitespace-nowrap">
+            ¡Escríbenos!
+        </span>
     </a>
 
-    <!-- Botón de regresar al inicio -->
-    <button id="btn-back-to-top" class="floating-btn hidden">
-        ↑
-    </button>
+<!-- Botón de regresar al inicio -->
+<button id="btn-back-to-top" class="fixed w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer z-50 transition-transform duration-300 ease-in-out hover:scale-105 bottom-4 left-8">
+    ↑
+</button>
 
     <!-- Archivos script .js -->
-    <script src="./src/js/main.js"></script>
+    <script src="./src/js/main.js"></script> -->
 </body>
 
 </html>
